@@ -1,0 +1,20 @@
+# 由 tools\scaffold-projects.ps1 生成，可自行补充
+fonts/
+*.zip
+*.7z
+*.rar
+*.iso
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
+~$*
+*secret*
+*token*
+*password*
+*.pem
+*.key
+.env
+
+# 大于 20MB 的文件（按约定不进 git）
+

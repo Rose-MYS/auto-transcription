@@ -1,0 +1,14 @@
+{
+  "id": "20261120-全自动扒谱",
+  "title": "20261120-全自动扒谱",
+  "owner": "host-dsh",
+  "status": "planning",
+  "created": "2026-11-21T10:48:25+08:00",
+  "note": "由 scaffold-projects.ps1 自动生成，可自行修改 title/owner/steps",
+  "steps": [
+    { "id": 1, "desc": "定义目标与拆分工作", "assignee": "host-dsh", "status": "in_progress" },
+    { "id": 2, "desc": "各自实现", "assignee": "all", "status": "pending" }
+  ],
+  "files": {},
+  "notes": "files 里登记的文件只有 owner 能写，其他人只读"
+}
