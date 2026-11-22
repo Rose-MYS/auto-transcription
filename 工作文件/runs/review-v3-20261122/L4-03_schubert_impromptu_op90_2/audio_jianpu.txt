@@ -1,0 +1,33 @@
+title=L4-03_schubert_impromptu_op90_2
+1=Gb
+3/4
+
+3'. | qb2' q3' b2' q6 q#4 | s2 sb2 s7, s6, qb6, q#4, qb6, | s6, sb6, s6, sb7, q6, qb7, q7, q7, |
+s1 s7, q1 sb2 s1 sb2 s2 qb2 q2 | sb2 s3 s2 qb2 s2 s3 s#4 qb6 q6 | s7 s#4' s3' q2' sb2' s7 s6 qb6 q#4 | s3 s7 s6 sb6 q#4 3 b2 |
+qb2 s2 s3 q#4 sb6 s6 q7 | q3' q2' qb2' qb7 sb6 s#4 s3 s2 | sb2 q7, q6, b6, ~ sb6, qb6, | s6, sb6, q6, qb7, qb7, s7, sb7, s7, s1 |
+q7, q1 sb2 s1 qb2 q2 q2 | sb2 s3 s2 qb2 s2 s3 q#4. q6 | q#4' q3' s2' sb2' s7 s6 qb6 q#4 | sb6 s7 s6 sb6 q6 q7 q2' q3' |
+s6 s7 sb2' s2' q3' q#4' sb6' s6' q7' | sb2'' s3'' q2'' qb2'' q6' qb6' q3' | q2' qb2' s6 sb6 q#4 q#4 qb6 | q6 q6 qb7 qb7 q7 q7 |
+s1' s7 q1' sb2' s1' qb2' q2' q2' | sb2' s3' s2' qb2' s2' s3' q#4'. q6' | s7' s#4'' s3'' s2'' qb2'' q7' s6' sb6' q#4' | s3' s7' s6' sb6' q#4' q3' q2' q7 |
+s6 sb2' s7 s6 qb6 q#4 q3 q7, | s1 s3 s2 s1 q7, q6, s5, s4, s3, s4, | q6, q2 q4 q2 q1 q1 | s7, s4 s3 s2 s1 q7, s6, s5, s3, s4, q3, |
+s5, s1 s3 q5, q1 s7, s5, s7, q6, | s3 s2 s1 q7, q6, q5, q4, | q4, q7, q2 q4, q7, q6, | sb6, s2 s1 s7, q6, qb6, q4, q3, q2, |
+s2, s6, s1 q3, q6, s5, s3, s5, q4, | s6, s2 s4 q6, q2 q1 q1 | s4 s7, sb6, s3 q7, qb6, qb6 q7, | s6 s1' s7 s6 q5 q4 q3 q2 |
+s1 s3 q2 q1 qb7, q5, q4, | s4, sb6, q7, s4 s7, sb6, s7, q5, q4, | s3, s3 s2 q1. q7, q6, q4, | s4, sb6, s7, s4 q7, qb6,. q7, q5, |
+s1 s3 s5 q3 q1 q1 qb7, | s6, s2 s4 s6 q4 q2 qb2 q2 | q1 qb2 s2 s3 s4 s5 q6 q7 | s1' s3' q2' q1' q6 q5 q4 |
+s2 s4 q3 q2 q7, q6, q7, | s2 s4 s3 q2 s1 s7, q6,. q7, | s2 s4 s3 s2 q1 q7, s6, sb6, s7, s2 | q4 qb6 7 sb6 s7 s1' s2' |
+q4' q3' s2' s1' s7 s6 qb6 q7 | s2' s4' s3' s2' q1' s7 s6 qb6 q7 | q2' q4' s2' s4' s4' s2' q4' q2' | s3' s2' s3' s2' q3' q2' q3' q3' |
+sb2' s3' s2' sb2' q7 q6 qb6 q#4 | s2 sb2 q7, 0 - q0 s0 | qb7,. qb7, q7, q7, | s1 s7, q1 sb2 s1 qb2 q2 q2 |
+sb2 s3 s2 sb2 q2 q3 q#4 q6 | s7 s#4' s3' s2' qb2' q7 q6 qb6 | qb6 q7 q6 q7 sb2' s2' s3' q6 | s7 sb2' s2' q3' s#4' sb6' q6' q7' |
+sb2'' s3'' s2'' sb2'' q7' q6' sb6' s#4' s3' s2' | qb2' q7 q6 qb6 q#4 qb6 | q6 q6 qb7 qb7 q7 q7 | q1' q1' qb2' qb2' s2' sb2' s2' sb2' |
+q1' qb2' q2' q2' s3' s2' s3' q2' | sb2' s2' s3' q2' q3' s#4' s4' s#4' sb6' | q5' qb6' qb7' qb7' q1'' q1'' | qb2'' qb2'' qb3'' qb3'' s4'' sb3'' s4'' q#4''. |
+q#4'' qb6'' qb6'' qb7'' qb7'' | s7'' s6'' s5'' q#4'' s3'' s2'' sb2'' q7' q6' | qb6' q3' q3' q#4' q6' q7' | s1'' s3'' s2'' s1'' q7' q6' q5' q3' |
+s4' s6' s5' q4'. q3' s1' s7 s6 sb6 | q7 s6 sb6 q4 q3 q2 q7, | s1' s3' s2' q1' s7 s6 s5 q4 q3 | q6 q5 q4 q3 q1 q6, |
+sb6, s7, s6, sb6, q4, s3, s2, q1, s7,, s6,, | q7,, q1, q4, s3, s2, 1, ~ s1, | s7,, s1, s2, q4, q3, q2, q1,. | s7,, s1, s2, q4, q3, q2, 1,. |
+s2, q3, s#4, sb6, q6,. | 1 - 0 | 3 - 0 | 4 qb6, q1 4, |
+4 q4, qb2 4, | q4 q1 q5 q1 qb6 q1 | 5 ~ s5 s5, s1 s3 5, | 1' q3 q5 1 |
+b6 q1 q4 b6, | q5 qb7, qb7 qb7, q5 qb7, | b6 q1 q4 b6, | 4 qb6, q1 4, |
+4 s4, q5, sb2 4, | q4 q1 q5 q1 qb6 q1 | 5 s5, s1 q3 5, | 1' q5, q5 1 |
+b6 q1 q4 b6, | s4 s1 s2 qb6. q2 q4 q2 | 5 q7, q2 5, | b3 ~ sb3 sb3, s5, s1 b3, |
+b2 q4, qb6, b2, | q7, q2, q2 q2, q7, q2, | 1 q1, q5, 1, | 1 q4, qb6, 1, |
+1 qb3, q5, 1, | s7, qb3, s4, q5, qb6, s5, s4, sb3, s2, | 1 qb3, q5, 1, | 1 q1, qb6, 1, |
+1 q1, qb3, 5, | q7, q4, q5, qb6, q4, q2, | 1 q1, q5, 1, | 5 q7, q2 5, |
+3 q3, q5, b2 | 4 1 q5 1 | qb6 1 0 |
