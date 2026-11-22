@@ -1,0 +1,24 @@
+title=L3-04_schubert_moment_musical_op94_3
+1=Ab
+2/4
+
+q0 6 6 | 6 q6 | q2' s1' s2' q1' s7 s1' | q3' q6 q3' q6 |
+q2' s1' s2' q1' q3' | q6' q6 q6' q6 | qb7' s6' sb7' q6' q6' | q6' q2'' q6' q6 |
+s3' s2' s1' s2' s3' s4' s3' sb6' | q6' q6 q6' q6 | q2' s1' s2' q1' q7 | q3' q6 q3' q6 |
+q2' s1' s2' q1' q3' | q6' q6 q6' q6 | qb7' s6' sb7' q6' q6' | q6' q2'' q6' q6 |
+s3' s2' s1' s2' s3' s4' s3' sb6' | q6' q6 q6' q6 | q3' q1' q3' q1' | s3' s4' s5' s4' q4' s7 s3' |
+q3' q2' s3' s2' s1' s2' | q2' q1' q3' q1' | q1'' s1' s5' q1'' q1' | s7' s6' sb6' s6' q6' q6 |
+s6' s5' s5' s1' q2' s4' s7 | 5' 5' | q3' q1' q3' q1' | s3' s4' s5' s4' q4' s7 s3' |
+q3' q2' s3' s2' s1' s2' | q2' q1' q3' q1' | q1'' q1' q1'' q1' | s7' s6' sb6' s6' q6' q6 |
+s6' s5' s5' s1' q2' s4' s7 | 5' 5' | b6' qb6' sb6 s6' | q1'' s1'' s7' s7' s6' s6' s5' |
+q3' qb6 qb6' sb6 s6' | q1'' s1'' s7' q6' s5' s4' | 3' q3' q3 | s3' s4' s5' s4' q4' s3' s2' |
+q1' q1' s1' s2' s3' s2' | 1' 1' | qb6' qb6 qb6' sb6 s6' | q1'' s1'' s7' q6' s5' s4' |
+3' qb6' sb6 s6' | q1'' s1'' s7' q6' s5' s4' | 3' q3' q3 | s3' s4' s5' s4' q4' s3' s2' |
+q1' q1' s1' s2' s3' s2' | 1' 1' | q2' s1' s2' q1' s7 s1' | q3' q6 q3' q6 |
+q2' s1' s2' q1' q3' | q6' q6 q6' q6 | qb7' s6' sb7' q6' q6' | q6' q2'' 6' |
+s3' s2' s1' s2' s3' s4' s3' sb6' | q6' q6 q6' q6 | q1'' s7' s1'' q7' q7' | q2'' 1'' s7' s6' |
+q4' s3' s4' q3' qb6' | q6' q6 q6' q6 | q1'' s7' s1'' q7' q7' | q2'' 1'' s7' s6' |
+q#4' s3' s#4' q3' q#4' | q#4' s3' s#4' q3' q#4' | q#4' s3' s#4' q3' qb6' | 6' 6' |
+q#4' s3' s#4' q3' qb2' | 2' 2' | q3' s2' s3' q2' qb6 | 6 6 |
+q#4' s3' s#4' s3' qb2'. | 2' 2' | q3' s2' s3' q2'. sb6 | 6 6 |
+6 6 | 6 - - - |  |
