@@ -51,23 +51,25 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
     # 节拍/强拍：可选用音频模型（beat_this），结果缓存为 beats_audio.json
     bt = None
     if BEATS != "none":
+        ckpt = "final0" if BEATS == "auto" else BEATS
         bj = out / "beats_audio.json"
         cb = cache / sid / "beats_audio.json" if cache else None
         if cb and cb.exists():
             shutil.copy(cb, bj)
         else:
             from bapu.beats import audio_beats
-            bj.write_text(json.dumps(audio_beats(str(audio), BEATS)), encoding="utf-8")
+            bj.write_text(json.dumps(audio_beats(str(audio), ckpt)), encoding="utf-8")
         bt = json.loads(bj.read_text(encoding="utf-8"))
         res["beat_model"] = {"model": bt.get("model"), "seconds": bt.get("seconds")}
 
     ans_xml = song / "answer.musicxml"
     ref_beats = song / "beats.json"
+    beats_mode = "none" if BEATS == "none" else ("auto" if BEATS == "auto" else "ext")
     for src, mid in (("audio", est_mid), ("oracle", song / "answer.mid")):
         t0 = time.time()
         sc, qn, ana = midi2score.transcribe_to_score(
             str(mid), title=sid, beats_ext=bt["beats"] if bt else None,
-            downbeats_ext=bt["downbeats"] if bt else None)
+            downbeats_ext=bt["downbeats"] if bt else None, beats_mode=beats_mode)
         sc.write("musicxml", fp=str(out / f"{src}_score.musicxml"))
         sc.write("midi", fp=str(out / f"{src}_score.mid"))
         (out / f"{src}_jianpu.txt").write_text(jianpu.score_to_jianpu(sc, sid), encoding="utf-8")
@@ -77,7 +79,7 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
                 render_svg(str(out / "audio_score.musicxml"), str(out / "audio_score"))
             except Exception as e:  # noqa: BLE001  预览失败不影响主流程
                 res["render_error"] = repr(e)
-        r = {"bpm": round(ana.bpm, 1), "meter": f"{ana.beats_per_bar}/4",
+        r = {"bpm": round(ana.bpm, 1), "meter": getattr(ana, "time_sig", f"{ana.beats_per_bar}/4"),
              "key": ana.key_name, "key_sharps": ana.key_sharps,
              "single_staff": ana.single_staff, "beat_regular": ana.beat_regular,
              "seconds": round(time.time() - t0, 1), **ana.info}
@@ -134,7 +136,7 @@ def main():
     ap.add_argument("--mode", default="auto", choices=["auto", "piano", "melody"],
                     help="转写路线：auto 自动判断；piano 钢琴；melody 单旋律（长笛、小提琴、人声等）")
     ap.add_argument("--beats", default="none",
-                    help="节拍来源：none = 从音符推断；final0 / small0 = beat_this 音频模型")
+                    help="节拍来源：none = 从音符推断；final0 / small0 = beat_this 音频模型；auto = 自动选择")
     a = ap.parse_args()
     global MODE, BEATS
     MODE = a.mode

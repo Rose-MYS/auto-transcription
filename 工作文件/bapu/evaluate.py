@@ -122,7 +122,8 @@ def beat_metrics(beats_json: str, ana) -> dict:
         accept |= {2, 4}
     if num == 6:
         accept |= {3, 6}
-    return {"ref_ts": ts, "est_ts": f"{ana.beats_per_bar}/4", "meter_ok": ana.beats_per_bar in accept,
+    est_ts = getattr(ana, "time_sig", f"{ana.beats_per_bar}/4")
+    return {"ref_ts": ts, "est_ts": est_ts, "meter_ok": (est_ts == ts) or (ana.beats_per_bar in accept),
             "beat_F": round(mir_eval.beat.f_measure(rb, est_beats), 3),
             "bar_F": round(mir_eval.beat.f_measure(rd, est_bars), 3),
             "meter_source": ana.info.get("meter_source")}
@@ -137,6 +138,7 @@ def meta_metrics(song_id: str, ana) -> dict:
     accept = {num, {12: 4, 6: 2, 9: 3}.get(num, num)}
     if num in (2, 4):
         accept |= {2, 4}
+    est_ts = getattr(ana, "time_sig", f"{ana.beats_per_bar}/4")
     return {"key_ok": ana.key_sharps == meta["key_sharps"], "ref_key_sharps": meta["key_sharps"],
-            "est_key_sharps": ana.key_sharps, "ref_ts": meta["ts"], "est_ts": f"{ana.beats_per_bar}/4",
-            "meter_ok": ana.beats_per_bar in accept}
+            "est_key_sharps": ana.key_sharps, "ref_ts": meta["ts"], "est_ts": est_ts,
+            "meter_ok": (est_ts == meta["ts"]) or (ana.beats_per_bar in accept)}
