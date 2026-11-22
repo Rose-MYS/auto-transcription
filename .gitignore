@@ -21,3 +21,11 @@ desktop.ini
 
 __pycache__/
 *.pyc
+
+# 有版权的测试音频/乐谱，只供个人测试，不进 git
+工作文件/test-songs/L5-rose/**/*.m4a
+工作文件/test-songs/L5-rose/**/*.pdf
+工作文件/test-songs/L5-rose/**/*.jpg
+
+工作文件/l5-review/l5_sheet_*.png
+
