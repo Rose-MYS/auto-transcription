@@ -52,6 +52,58 @@ def load_notes(path: str) -> np.ndarray:
     return np.array(rows, dtype=float)
 
 
+def load_notes_with_pedal(path: str) -> np.ndarray:
+    """读取音符并结合 CC64 延音踏板延长实际发声时值（不越过同音高下一次起音）。"""
+    pm = pretty_midi.PrettyMIDI(path)
+    raw = [(n.start, n.end, n.pitch, n.velocity)
+           for inst in pm.instruments if not inst.is_drum for n in inst.notes]
+    raw.sort()
+    if not raw:
+        return np.array(raw, dtype=float)
+    ccs = sorted(
+        [(c.time, c.value) for inst in pm.instruments if not inst.is_drum
+         for c in inst.control_changes if c.number == 64],
+        key=lambda x: x[0],
+    )
+    if not ccs:
+        return np.array(raw, dtype=float)
+    max_end = max(r[1] for r in raw)
+    ped_iv = []
+    t_down = None
+    for t, v in ccs:
+        if v >= 64 and t_down is None:
+            t_down = t
+        elif v < 64 and t_down is not None:
+            if t > t_down:
+                ped_iv.append((t_down, t))
+            t_down = None
+    if t_down is not None and max_end > t_down:
+        ped_iv.append((t_down, max_end + 1.0))
+    if not ped_iv:
+        return np.array(raw, dtype=float)
+
+    by_pitch = {}
+    for s, e, p, v in raw:
+        by_pitch.setdefault(int(p), []).append(s)
+    ped_starts = np.array([iv[0] for iv in ped_iv], dtype=float)
+
+    out = []
+    for s, e, p, v in raw:
+        p_int = int(p)
+        # 查找 e 是否落在某个踏板区间内
+        idx = int(np.searchsorted(ped_starts, e, side="right")) - 1
+        new_e = e
+        if 0 <= idx < len(ped_iv):
+            t0, t1 = ped_iv[idx]
+            if t0 <= e <= t1:
+                nxt_list = by_pitch[p_int]
+                ni = int(np.searchsorted(nxt_list, s + 0.01, side="right"))
+                cap = nxt_list[ni] - 0.01 if ni < len(nxt_list) else t1
+                new_e = max(e, min(t1, cap, s + 4.0))
+        out.append((s, new_e, p, v))
+    return np.array(out, dtype=float)
+
+
 # ---------------------------------------------------------------- 1. 节拍
 FPS = 100
 
@@ -132,14 +184,40 @@ def to_beat_pos(t: np.ndarray, beats: np.ndarray) -> np.ndarray:
     return pos
 
 
-def quantize_onsets(pos: np.ndarray, triplets: bool = True, compound: bool = False) -> list:
+def _cluster_onsets(frac: np.ndarray, tol: float = 0.06) -> np.ndarray:
+    """将一拍内时间相近（和弦/微偏移）的起音聚类，返回各簇中位位置。"""
+    s = np.sort(frac)
+    if len(s) == 0:
+        return s
+    clusters = [[s[0]]]
+    for x in s[1:]:
+        if x - clusters[-1][-1] <= tol:
+            clusters[-1].append(x)
+        else:
+            clusters.append([x])
+    return np.array([float(np.median(c)) for c in clusters], dtype=float)
+
+
+def quantize_onsets(pos: np.ndarray, triplets: bool = True, compound: bool = False,
+                    expressive: bool = False, bpm: float = 120.0) -> list:
     out = [None] * len(pos)
     if compound:
-        for i, p in enumerate(pos):
-            b = int(np.floor(p + 1 / 12))
-            f = p - b
-            out[i] = Fraction(b) + Fraction(int(round(f * 6)), 6)
+        if not expressive:
+            for i, p in enumerate(pos):
+                b = int(np.floor(p + 1 / 12))
+                f = p - b
+                out[i] = Fraction(b) + Fraction(int(round(f * 6)), 6)
+            return out
+        beat_of = np.floor(pos + 1 / 12).astype(int)
+        for b in np.unique(beat_of):
+            sel = np.where(beat_of == b)[0]
+            frac = pos[sel] - b
+            uniq = _cluster_onsets(frac)
+            grid = 3 if (len(uniq) <= 2 or (bpm >= 120.0 and len(uniq) <= 3)) else 6
+            for i, f in zip(sel, frac):
+                out[i] = Fraction(int(b)) + Fraction(int(round(f * grid)), grid)
         return out
+
     beat_of = np.floor(pos + 1 / 8).astype(int)
     for b in np.unique(beat_of):
         sel = np.where(beat_of == b)[0]
@@ -149,17 +227,39 @@ def quantize_onsets(pos: np.ndarray, triplets: bool = True, compound: bool = Fal
         q3 = np.round(frac * 3) / 3
         e3 = np.abs(frac - q3).mean()
         has_mid3 = np.any(np.isin(np.round(q3 * 3) % 3, [1, 2]))
-        use3 = triplets and len(sel) >= 2 and has_mid3 and e3 < 0.55 * e4
-        for i, f in zip(sel, frac):
+        if not expressive:
+            use3 = triplets and len(sel) >= 2 and has_mid3 and e3 < 0.55 * e4
+            grid = 3 if use3 else 4
+        else:
+            uniq = _cluster_onsets(frac)
+            slots3 = {int(round(u * 3)) % 3 for u in uniq}
+            use3 = (triplets and len(uniq) >= 3 and slots3 == {0, 1, 2}
+                    and e3 < 0.45 * e4 and e3 < 0.055)
             if use3:
-                out[i] = Fraction(int(b)) + Fraction(int(round(f * 3)), 3)
+                grid = 3
+            elif bpm >= 180.0:
+                grid = 4 if len(uniq) >= 4 else 2
+            elif bpm >= 115.0:
+                grid = 4 if len(uniq) >= 3 else 2
             else:
-                out[i] = Fraction(int(b)) + Fraction(int(round(f * 4)), 4)
+                grid = 2 if (len(uniq) == 1 and abs(uniq[0] - round(uniq[0] * 2) / 2) < 0.16) else 4
+        for i, f in zip(sel, frac):
+            out[i] = Fraction(int(b)) + Fraction(int(round(f * grid)), grid)
     return out
 
 
-def quantize_dur(on_q: Fraction, end_pos: float, compound: bool = False) -> Fraction:
-    grid = 6 if compound else (3 if on_q.denominator == 3 else 4)
+def quantize_dur(on_q: Fraction, end_pos: float, compound: bool = False,
+                 expressive: bool = False, bpm: float = 120.0) -> Fraction:
+    if not expressive:
+        grid = 6 if compound else (3 if on_q.denominator == 3 else 4)
+    elif compound:
+        grid = 3 if on_q.denominator in (1, 3) else 6
+    elif on_q.denominator == 3:
+        grid = 3
+    elif bpm >= 115.0 and on_q.denominator in (1, 2):
+        grid = 2
+    else:
+        grid = 4
     end_q = Fraction(int(round(end_pos * grid)), grid)
     d = end_q - on_q
     if d <= 0:
@@ -335,8 +435,9 @@ def split_hands(qnotes):
 
 
 # ---------------------------------------------------------------- 6. 生成谱面
-def hand_to_events(notes):
-    """同一手内：同起点的音合成和弦；时值截到下一个起点，避免声部重叠。"""
+def hand_to_events(notes, expressive: bool = False, beat_ql: Fraction = Fraction(1),
+                   total_len: Fraction | None = None, bpm: float = 120.0):
+    """同一手内：同起点的音合成和弦；时值截到下一个起点，避免声部重叠，并清理碎休止符。"""
     groups = {}
     for n in notes:
         groups.setdefault(n.onset, []).append(n)
@@ -348,14 +449,33 @@ def hand_to_events(notes):
         if i + 1 < len(ons):
             ioi = ons[i + 1] - on
             d = min(d, ioi)
-            # 连奏假设：与下一个音之间的小空隙（< 半拍且 < 间隔的一半）补满，避免满屏碎休止符
-            if ioi - d <= Fraction(1, 2) and (ioi - d) * 2 <= ioi:
-                d = ioi
+            if not expressive:
+                # 连奏假设：与下一个音之间的小空隙（< 半拍且 < 间隔的一半）补满，避免满屏碎休止符
+                if ioi - d <= Fraction(1, 2) and (ioi - d) * 2 <= ioi:
+                    d = ioi
+            else:
+                if bpm >= 115.0 and d < Fraction(1, 2) and ioi >= Fraction(1, 2):
+                    d = Fraction(1, 2)
+                if ioi - d < beat_ql:
+                    d = ioi
+                else:
+                    end_snap = Fraction(int(np.ceil(float((on + d) / beat_ql)))) * beat_ql
+                    d = min(ioi, end_snap - on)
+        elif expressive and total_len is not None and total_len > on:
+            rem = total_len - on
+            d = min(d, rem)
+            if rem - d < beat_ql:
+                d = rem
+            else:
+                end_snap = Fraction(int(np.ceil(float((on + d) / beat_ql)))) * beat_ql
+                d = min(rem, end_snap - on)
         ev.append((on, d, sorted({n.pitch for n in g})))
     return ev
 
 
-def build_part(events, k, time_sig: str, total_len, part_clef, name, mark_bpm=None, beat_ql: Fraction = Fraction(1)):
+def build_part(events, k, time_sig: str, total_len, part_clef, name, mark_bpm=None,
+               beat_ql: Fraction = Fraction(1), bar_ql: Fraction = Fraction(4),
+               pickup_ql: Fraction = Fraction(0)):
     p = stream.PartStaff()
     p.partName = name
     p.insert(0, part_clef)
@@ -379,6 +499,29 @@ def build_part(events, k, time_sig: str, total_len, part_clef, name, mark_bpm=No
             r.duration = duration.Duration(on - t)
             p.insert(t, r)
         t = max(t, on + d)
+    p.makeMeasures(inPlace=True)
+    if pickup_ql > 0:
+        pad = float(bar_ql - pickup_ql)
+        ms = list(p.getElementsByClass(stream.Measure))
+        if ms:
+            m0 = ms[0]
+            for el in list(m0):
+                if isinstance(el, (note.Note, chord.Chord, note.Rest)):
+                    off = float(el.offset)
+                    dur = float(el.quarterLength)
+                    if off + dur <= pad + 1e-6:
+                        m0.remove(el)
+                    elif off < pad - 1e-6:
+                        el.duration = duration.Duration(off + dur - pad)
+                        el.offset = 0.0
+                    else:
+                        el.offset = off - pad
+            m0.paddingLeft = pad
+            m0.number = 0
+            m0.showNumber = stream.enums.ShowNumber.NEVER
+            for idx, m in enumerate(ms[1:], start=1):
+                m.number = idx
+                m.offset = float(pickup_ql) + (idx - 1) * float(bar_ql)
     return p
 
 
@@ -434,21 +577,25 @@ def _best_bar_subdivision(d_times: np.ndarray, notes: np.ndarray) -> int:
     return best_k
 
 
-def _detect_compound(beats: np.ndarray, notes: np.ndarray) -> tuple[bool, float]:
-    """检测拍内是否呈三等分/六等分复拍子律动（如 6/8、12/8）而非二/四等分单拍子。"""
+def _detect_compound(beats: np.ndarray, notes: np.ndarray) -> tuple[str, float]:
+    """检测拍内是否呈三等分/六等分复拍子律动（如 6/8、12/8 或快一拍一小节 3/8）。"""
     bpm = 60.0 / float(np.median(np.diff(beats)))
-    if bpm >= 120.0:
-        return False, 1.0
     pos = to_beat_pos(notes[:, 0], beats)
     frac = pos - np.floor(pos)
     non_on = np.abs(frac - np.round(frac)) > 0.1
     if np.sum(non_on) < 8:
-        return False, 1.0
+        return "", 1.0
     f = frac[non_on]
     e4 = float(np.mean(np.abs(f - np.round(f * 4) / 4)))
+    e3 = float(np.mean(np.abs(f - np.round(f * 3) / 3)))
     e6 = float(np.mean(np.abs(f - np.round(f * 6) / 6)))
-    ratio = e6 / (e4 + 1e-9)
-    return bool(ratio < 0.62), round(ratio, 3)
+    r6 = e6 / (e4 + 1e-9)
+    r3 = e3 / (e4 + 1e-9)
+    if bpm < 120.0 and r6 < 0.62:
+        return "compound_slow", round(r6, 3)
+    if 115.0 <= bpm < 175.0 and r3 < 0.65 and r6 < 0.62:
+        return "compound_38", round(r3, 3)
+    return "", round(r6, 3)
 
 
 def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
@@ -547,7 +694,16 @@ def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
             M_ext, ph_ext = ext
 
     # 5. 复拍子与倍频修正（保持强拍位置不变）
-    compound, comp_ratio = _detect_compound(beats, notes)
+    comp_kind, comp_ratio = _detect_compound(beats, notes)
+    if comp_kind == "compound_38" and M_ext == 2:
+        start = ph_ext % 2
+        beats = beats[start::2]
+        M_ext = 1
+        ph_ext = 0
+        compound = "compound_38"
+    else:
+        compound = comp_kind == "compound_slow"
+
     bpm = 60.0 / float(np.median(np.diff(beats)))
     ioi = np.diff(np.unique(np.round(notes[:, 0], 2)))
     ioi = ioi[ioi > 0.03]
@@ -612,15 +768,19 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
         ibis = np.diff(beats)
         regular = bool(np.std(ibis) / np.mean(ibis) < 0.06)
         beat_src = "beat_this"
+        notes_q = load_notes_with_pedal(midi_path)
     else:
         beats = note_beats
         beat_src = "notes"
+        notes_q = notes
 
-    pos_on = to_beat_pos(notes[:, 0], beats)
-    pos_off = to_beat_pos(notes[:, 1], beats)
-    on_q = quantize_onsets(pos_on, triplets=triplets, compound=compound)
-    qnotes = [QNote(o, quantize_dur(o, e, compound=compound), int(p), int(v))
-              for o, e, p, v in zip(on_q, pos_off, notes[:, 2], notes[:, 3])]
+    bpm = 60.0 / float(np.median(np.diff(beats)))
+    is_comp = bool(compound)
+    pos_on = to_beat_pos(notes_q[:, 0], beats)
+    pos_off = to_beat_pos(notes_q[:, 1], beats)
+    on_q = quantize_onsets(pos_on, triplets=triplets, compound=is_comp, expressive=use_ext, bpm=bpm)
+    qnotes = [QNote(o, quantize_dur(o, e, compound=is_comp, expressive=use_ext, bpm=bpm), int(p), int(v))
+              for o, e, p, v in zip(on_q, pos_off, notes_q[:, 2], notes_q[:, 3])]
     seen, uniq = set(), []
     for n in qnotes:                       # 去重（同起点同音高）
         if (n.onset, n.pitch) not in seen:
@@ -642,13 +802,13 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
     shift = Fraction((M - ph) % M)
     first = min(n.onset for n in qnotes)
     shift -= int((first + shift) // M) * M
-    beat_ql = Fraction(3, 2) if compound else Fraction(1)
+    beat_ql = Fraction(3, 2) if is_comp else Fraction(1)
     for n in qnotes:
         n.onset = (n.onset + shift) * beat_ql
         n.dur = n.dur * beat_ql
 
-    ts_num = 3 * M if compound else M
-    ts_den = 8 if compound else 4
+    ts_num = 3 * M if is_comp else M
+    ts_den = 8 if is_comp else 4
     time_sig = f"{ts_num}/{ts_den}"
     bar_ql = Fraction(ts_num * 4, ts_den)
 
@@ -657,36 +817,42 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
     if not single:
         split_hands(qnotes)
 
+    first_on = min(n.onset for n in qnotes)
+    pickup_ql = bar_ql - first_on if (Fraction(0) < first_on < bar_ql and (bar_ql - first_on) <= bar_ql * Fraction(3, 4)) else Fraction(0)
     total = max(n.onset + n.dur for n in qnotes)
     total_len = Fraction(int(np.ceil(float(total / bar_ql)))) * bar_ql
-    bpm = 60.0 / float(np.median(np.diff(beats)))
 
     sc = stream.Score()
     sc.insert(0, metadata.Metadata())
     sc.metadata.title = title or "Transcription"
     sc.metadata.composer = "auto-transcribed (bapu)"
     if single:
-        ev = hand_to_events(qnotes)
-        part = build_part(ev, k, time_sig, total_len, choose_clef(ev), "Melody", bpm, beat_ql=beat_ql)
+        ev = hand_to_events(qnotes, expressive=use_ext, beat_ql=beat_ql, total_len=total_len, bpm=bpm)
+        part = build_part(ev, k, time_sig, total_len, choose_clef(ev), "Melody", bpm,
+                          beat_ql=beat_ql, bar_ql=bar_ql, pickup_ql=pickup_ql)
         part.insert(0, instrument.Piano())
         sc.insert(0, part)
     else:
         rh = [n for n in qnotes if n.hand == 0]
         lh = [n for n in qnotes if n.hand == 1]
-        p1 = build_part(hand_to_events(rh), k, time_sig, total_len, clef.TrebleClef(), "Piano", bpm, beat_ql=beat_ql)
-        p2 = build_part(hand_to_events(lh), k, time_sig, total_len, clef.BassClef(), "", beat_ql=beat_ql)
+        p1 = build_part(hand_to_events(rh, expressive=use_ext, beat_ql=beat_ql, total_len=total_len, bpm=bpm),
+                        k, time_sig, total_len, clef.TrebleClef(), "Piano", bpm,
+                        beat_ql=beat_ql, bar_ql=bar_ql, pickup_ql=pickup_ql)
+        p2 = build_part(hand_to_events(lh, expressive=use_ext, beat_ql=beat_ql, total_len=total_len, bpm=bpm),
+                        k, time_sig, total_len, clef.BassClef(), "",
+                        beat_ql=beat_ql, bar_ql=bar_ql, pickup_ql=pickup_ql)
         p1.insert(0, instrument.Piano())
         sc.insert(0, p1)
         sc.insert(0, p2)
         sc.insert(0, layout.StaffGroup([p1, p2], name="Piano", abbreviation="Pno.",
                                        symbol="brace", barTogether=True))
-    ana = Analysis(bpm=bpm, beats_per_bar=ts_num if compound else M, downbeat_phase=ph,
+    ana = Analysis(bpm=bpm, beats_per_bar=ts_num if is_comp else M, downbeat_phase=ph,
                    key_name=f"{k.tonic.name} {k.mode}", key_sharps=k.sharps,
                    single_staff=single, beat_regular=regular, time_sig=time_sig,
                    info={"meter_scores": {f"{a}/{b}": round(c, 3) for (a, b), c in mscores.items()},
                          "n_notes": len(qnotes), "n_beats": int(len(beats)),
                          "beat_source": beat_src, "meter_source": meter_src,
-                         "compound": compound, "comp_ratio": comp_ratio,
+                         "compound": is_comp, "comp_ratio": comp_ratio,
                          **({"beat_auto_info": auto_info} if auto_info else {}),
                          "beat_times": [round(float(b), 3) for b in beats],
                          "bar_times": [round(t, 3) for t in bar_times]})
