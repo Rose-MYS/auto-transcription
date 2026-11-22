@@ -110,7 +110,8 @@ def fmt_row(r: dict, src: str) -> str:
                 f"{m['dur_acc']} | {m['hand_acc'] if m['hand_acc'] is not None else '—'} |")
     if "beat_level" in s:
         m = s["beat_level"]
-        return (f"| {r['song']} | {nl.get('F1', '')} | — | "
+        kmark = ('✓' if m["key_ok"] else '✗') if "key_ok" in m else '—'
+        return (f"| {r['song']} | {nl.get('F1', '')} | {kmark} | "
                 f"{m['est_ts']}{' ✓' if m['meter_ok'] else ' ✗(' + m['ref_ts'] + ')'} | "
                 f"节拍F {m['beat_F']} | 小节线F {m['bar_F']} | — | — | — |")
     m = s.get("meta_level", {})

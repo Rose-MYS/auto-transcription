@@ -340,13 +340,49 @@ def detect_meter(feats: dict, first_beat: int):
 
 
 # ---------------------------------------------------------------- 4. 调号
-def detect_key(qnotes):
+def detect_key(notes_in):
+    """基于未经延音/记谱整理的原始音符做调性分析（Temperley-Kostka-Payne），并结合开头乐句消歧同主音大小调。"""
     s = stream.Stream()
-    for n in qnotes:
-        x = note.Note(n.pitch)
-        x.quarterLength = float(min(n.dur, 4))
-        s.insert(float(n.onset), x)
-    return s.analyze("key")
+    if isinstance(notes_in, np.ndarray) and len(notes_in) > 0:
+        t0 = float(notes_in[:, 0].min())
+        t1 = float(notes_in[:, 1].max())
+        for st, en, p, _ in notes_in:
+            x = note.Note(int(p))
+            x.quarterLength = float(min(max(en - st, 0.05), 4.0))
+            s.insert(float(st), x)
+        k = s.analyze("key.temperleykostkapayne")
+
+        # 开头乐句通常建立主调：若开头与全曲同主音但大小调相反，且三度音程明确，则取开头大小调
+        span = max(t1 - t0, 1.0)
+        open_end = t0 + min(15.0, 0.25 * span)
+        open_notes = notes_in[notes_in[:, 0] <= open_end]
+        if len(open_notes) >= 8:
+            so = stream.Stream()
+            for st, en, p, _ in open_notes:
+                x = note.Note(int(p))
+                x.quarterLength = float(min(max(en - st, 0.05), 4.0))
+                so.insert(float(st), x)
+            ko = so.analyze("key.temperleykostkapayne")
+            if k.tonic.pitchClass == ko.tonic.pitchClass and k.mode != ko.mode:
+                tc = k.tonic.pitchClass
+                op10 = notes_in[notes_in[:, 0] <= t0 + min(10.0, 0.2 * span)]
+                pcs = op10[:, 2].astype(int) % 12
+                maj3 = int(np.sum(pcs == (tc + 4) % 12))
+                min3 = int(np.sum(pcs == (tc + 3) % 12))
+                if ko.mode == "major" and maj3 >= 4 and maj3 >= 2 * min3:
+                    k = ko
+                elif ko.mode == "minor" and min3 >= 4 and min3 >= 2 * maj3:
+                    k = ko
+    else:
+        for n in notes_in:
+            x = note.Note(n.pitch)
+            x.quarterLength = float(min(n.dur, 4))
+            s.insert(float(n.onset), x)
+        k = s.analyze("key.temperleykostkapayne")
+
+    if abs(k.sharps) > 6:
+        k = k.getEnharmonic()
+    return k
 
 
 def _set_name(midi: int, name: str) -> m21pitch.Pitch:
@@ -812,7 +848,7 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
     time_sig = f"{ts_num}/{ts_den}"
     bar_ql = Fraction(ts_num * 4, ts_den)
 
-    k = detect_key(qnotes)
+    k = detect_key(notes)
     single = is_monophonic(qnotes)
     if not single:
         split_hands(qnotes)

@@ -10,20 +10,30 @@
 from __future__ import annotations
 
 from fractions import Fraction
+from pathlib import Path
 
 import numpy as np
 import mir_eval
 import pretty_midi
 from music21 import converter, key as m21key, meter, note
 
-# L3 曲目的已知调号/拍号（来自乐谱）
+# L3 / L4 曲目的已知调号/拍号（来自乐谱）
 META = {
     "L3-01": {"key_sharps": 0, "ts": "4/4"},     # BWV 846 C 大调
     "L3-02": {"key_sharps": 1, "ts": "3/4"},     # 格里格圆舞曲 e 小调
     "L3-03": {"key_sharps": -1, "ts": "3/8"},    # 斯卡拉蒂 K.525 F 大调
     "L3-04": {"key_sharps": -4, "ts": "2/4"},    # 舒伯特 f 小调
     "L3-05": {"key_sharps": -3, "ts": "12/8"},   # 肖邦 降 E 大调
+    "L4-01": {"key_sharps": 0, "ts": "4/4"},     # BWV 846 C 大调
+    "L4-02": {"key_sharps": -4, "ts": "2/4"},    # 舒伯特 f 小调
+    "L4-03": {"key_sharps": -3, "ts": "3/4"},    # 舒伯特 Op.90-2 降 E 大调
+    "L4-04": {"key_sharps": -1, "ts": "3/4"},    # 莫扎特 K332-1 F 大调
+    "L4-05": {"key_sharps": -5, "ts": "6/8"},    # 肖邦 Op.57 降 D 大调（升 C 大调 +7 为等音调）
 }
+
+
+def _key_sharps_ok(est: int, ref: int) -> bool:
+    return est == ref or {est, ref} in ({-5, 7}, {5, -7}, {-6, 6})
 
 
 def _notes(path):
@@ -123,10 +133,17 @@ def beat_metrics(beats_json: str, ana) -> dict:
     if num == 6:
         accept |= {3, 6}
     est_ts = getattr(ana, "time_sig", f"{ana.beats_per_bar}/4")
-    return {"ref_ts": ts, "est_ts": est_ts, "meter_ok": (est_ts == ts) or (ana.beats_per_bar in accept),
-            "beat_F": round(mir_eval.beat.f_measure(rb, est_beats), 3),
-            "bar_F": round(mir_eval.beat.f_measure(rd, est_bars), 3),
-            "meter_source": ana.info.get("meter_source")}
+    out = {"ref_ts": ts, "est_ts": est_ts, "meter_ok": (est_ts == ts) or (ana.beats_per_bar in accept),
+           "beat_F": round(mir_eval.beat.f_measure(rb, est_beats), 3),
+           "bar_F": round(mir_eval.beat.f_measure(rd, est_bars), 3),
+           "meter_source": ana.info.get("meter_source")}
+    song_id = Path(beats_json).parent.name
+    meta = META.get(song_id[:5])
+    if meta:
+        out["key_ok"] = _key_sharps_ok(ana.key_sharps, meta["key_sharps"])
+        out["ref_key_sharps"] = meta["key_sharps"]
+        out["est_key_sharps"] = ana.key_sharps
+    return out
 
 
 def meta_metrics(song_id: str, ana) -> dict:
@@ -139,7 +156,7 @@ def meta_metrics(song_id: str, ana) -> dict:
     if num in (2, 4):
         accept |= {2, 4}
     est_ts = getattr(ana, "time_sig", f"{ana.beats_per_bar}/4")
-    return {"key_ok": ana.key_sharps == meta["key_sharps"], "ref_key_sharps": meta["key_sharps"],
+    return {"key_ok": _key_sharps_ok(ana.key_sharps, meta["key_sharps"]), "ref_key_sharps": meta["key_sharps"],
             "est_key_sharps": ana.key_sharps, "ref_ts": meta["ts"], "est_ts": est_ts,
             "meter_ok": (est_ts == meta["ts"]) or (ana.beats_per_bar in accept)}
 
