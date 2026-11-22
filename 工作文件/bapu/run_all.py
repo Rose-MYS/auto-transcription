@@ -64,6 +64,9 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
 
     ans_xml = song / "answer.musicxml"
     ref_beats = song / "beats.json"
+    if ans_xml.exists():
+        from music21 import converter
+        res["ref_readability"] = evaluate.readability_metrics(converter.parse(str(ans_xml)))
     beats_mode = "none" if BEATS == "none" else ("auto" if BEATS == "auto" else "ext")
     for src, mid in (("audio", est_mid), ("oracle", song / "answer.mid")):
         t0 = time.time()
@@ -83,6 +86,7 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
              "key": ana.key_name, "key_sharps": ana.key_sharps,
              "single_staff": ana.single_staff, "beat_regular": ana.beat_regular,
              "seconds": round(time.time() - t0, 1), **ana.info}
+        r["readability"] = evaluate.readability_metrics(sc)
         if ans_xml.exists():
             r["score_level"] = evaluate.score_metrics(str(ans_xml), sc)
         elif ref_beats.exists():
@@ -114,6 +118,15 @@ def fmt_row(r: dict, src: str) -> str:
             f"{m.get('est_ts', '')}{'' if m.get('meter_ok') else ' ✗(' + m.get('ref_ts', '') + ')'} | — | — | — | — | — |")
 
 
+def fmt_read_row(r: dict) -> str:
+    ar = r.get("audio", {}).get("readability", {})
+    rr = r.get("ref_readability") or r.get("oracle", {}).get("readability", {})
+    ref_kind = "标准谱" if "ref_readability" in r else "Oracle"
+    return (f"| {r['song']} | {ar.get('rests_per_bar', '')} | {ar.get('tuplet_ratio', '')} | "
+            f"{ar.get('short16_ratio', '')} | {'✓' if ar.get('has_pickup') else '—'} | "
+            f"{ref_kind}: {rr.get('rests_per_bar', '')} / {rr.get('tuplet_ratio', '')} / {rr.get('short16_ratio', '')} |")
+
+
 def write_report(results: list, out: Path):
     head = ("| 曲目 | 转写音符F1 | 调号 | 拍号 | 谱面音符F1 | 小节线对齐 | 拍子层级 | 时值准确率 | 左右手准确率 |\n"
             "|---|---|---|---|---|---|---|---|---|")
@@ -121,6 +134,10 @@ def write_report(results: list, out: Path):
              "## A. 完整流程：音频 → 谱子", "", head] + [fmt_row(r, "audio") for r in results if "audio" in r]
     lines += ["", "## B. 只测“MIDI→谱子”：用标准答案 MIDI 作输入", "", head] + \
              [fmt_row(r, "oracle") for r in results if "oracle" in r]
+    rhead = ("| 曲目 | 休止符/小节 | 连音占比 | ≤16分音符占比 | 弱起小节 | 参考(休止/连音/≤16分) |\n"
+             "|---|---|---|---|---|---|")
+    lines += ["", "## C. 谱面可读性（与参考谱 / Oracle 对比）", "", rhead] + \
+             [fmt_read_row(r) for r in results if "audio" in r]
     errs = [r for r in results if "error" in r]
     if errs:
         lines += ["", "## 出错", ""] + [f"- {r['song']}: {r['error']}" for r in errs]

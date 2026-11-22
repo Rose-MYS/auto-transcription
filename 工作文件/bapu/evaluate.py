@@ -14,7 +14,7 @@ from fractions import Fraction
 import numpy as np
 import mir_eval
 import pretty_midi
-from music21 import converter, key as m21key, meter
+from music21 import converter, key as m21key, meter, note
 
 # L3 曲目的已知调号/拍号（来自乐谱）
 META = {
@@ -142,3 +142,41 @@ def meta_metrics(song_id: str, ana) -> dict:
     return {"key_ok": ana.key_sharps == meta["key_sharps"], "ref_key_sharps": meta["key_sharps"],
             "est_key_sharps": ana.key_sharps, "ref_ts": meta["ts"], "est_ts": est_ts,
             "meter_ok": (est_ts == meta["ts"]) or (ana.beats_per_bar in accept)}
+
+
+def readability_metrics(sc) -> dict:
+    """谱面可读性指标：每小节平均休止符数、连音占比、16 分及更短音符占比、是否真弱起。"""
+    parts = list(sc.parts)
+    n_bars = 0
+    n_rests = 0
+    n_notes = 0
+    n_tuplets = 0
+    n_short16 = 0
+    has_pickup = False
+    for pi, p in enumerate(parts):
+        ms = list(p.getElementsByClass("Measure"))
+        if not ms:
+            p_m = p.makeMeasures()
+            ms = list(p_m.getElementsByClass("Measure"))
+        n_bars = max(n_bars, len(ms))
+        if pi == 0 and ms and ms[0].barDurationProportion() < 0.99:
+            has_pickup = True
+        for el in p.flatten().notesAndRests:
+            if isinstance(el, note.Rest):
+                n_rests += 1
+            else:
+                n_notes += 1
+                if el.duration.tuplets:
+                    n_tuplets += 1
+                if float(el.quarterLength) <= 0.25 + 1e-6:
+                    n_short16 += 1
+    n_bars = max(1, n_bars)
+    return {
+        "n_bars": n_bars,
+        "n_rests": n_rests,
+        "n_notes": n_notes,
+        "rests_per_bar": round(n_rests / n_bars, 2),
+        "tuplet_ratio": round(n_tuplets / max(1, n_notes), 3),
+        "short16_ratio": round(n_short16 / max(1, n_notes), 3),
+        "has_pickup": has_pickup,
+    }
