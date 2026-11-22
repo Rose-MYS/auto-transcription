@@ -381,7 +381,7 @@ def detect_key(notes_in):
         k = s.analyze("key.temperleykostkapayne")
 
     if abs(k.sharps) > 6:
-        k = k.getEnharmonic()
+        k = m21key.Key(k.tonic.getEnharmonic(), k.mode)
     return k
 
 
