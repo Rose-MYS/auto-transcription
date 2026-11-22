@@ -1,0 +1,23 @@
+title=L4-04_mozart_sonata_K332_1
+1=Eb
+3/4
+
+2 6, #4 | 6 1 #4 | 5 7, 3' | q2' qb2' b2' 0 |
+2' #4 7 | 3 6. q#4 | 2 - - | q3 sb2 s2 qb2 q7, b2 |
+#4 5 7 | q7 q6 q5 q#4 q3 q2 | 3 5 b2 | 2 0 q6'. s5' |
+#4' #4' q#4'. s3' | 2' 2' 2' | 3' 3' 3' | 3' #4' s6' s7' s6' s5' |
+#4' #4' s#4' s5' s#4' s3' | 2' 2' 2' | 3' 5' b2' | 2' 0 6' |
+2' 0 6 | 2 0 b7, | 7, q0 s2 s#4 q7 s#4 s7 | q2' s7 s2' q#4' q#4' q2' q7 |
+sb7 s3' 5' s#4' s3' s2' sb2' s7 sb7 | 5' q0 s#4' s3' s2' sb2' s7 sb7 | 7. s2 s#4 q7 s#4 s7 | q2' s7 s2' q#4' q#4' q2' q7 |
+4'. s3' s2' s1' s7 s6 sb6 | 4'. s3' s2' s1' s7 s6 sb6 | 6 ~ s6 s3 s6 s3 s1' s6 s1' s6 | s3' s1' s3' s1' 6' 0 |
+6 ~ s6 s4 s6 s4 s1' s6 s1' s6 | s4' s1' s4' s1' 6' 0 | 6 ~ s6 sb3 s6 sb3 s1' s6 s1' s6 | sb3' s1' s4' s1' 6' b3' |
+sb6 s7 3'. s2' s1' s7 s6 | 3' - s2' s1' s7 s6 | 3'. q4' s2' s1' s7 s6 | 3' 3 0 |
+b2' b2' qb2'. s7, | 3'. q2' 7 | q7 q6 6. q7 | 7 - b2' |
+2' s2 s3' sb2' s2' q3' q#4' | q#4' q3' qb3' q3' q2' q7 | q1' qb2' q2' qb2' q3' q2' | qb2' q7 q6 qb6 q#4 q3 |
+q1' sb2' s3 q1' sb2' s3 q1' qb2' | qb3' q3' qb3' q3' q2' q7 | q7 q6 q7 q6 qb2' q7 | 7. q1' b2' |
+2' s3' s2' sb2' s2' q3' q#4' | q#4' q3' qb3' q3' q2' q7 | q1' qb2' q3' q2' q7 qb6 | q6 3 3 q3 |
+q3 3 3 q3 | q3 3 3 q3 | q3 3 3 q3 | q3 3 3 q3 |
+q4 4 q4 q6, q4 | q4 4 4 q4 | q3 3 q3 q5, q3 | q3 q3 q4, q3 q2 q2 |
+q7, q2 q2 q2 q3, q2 | q4, q1 q3, q1 qb3, q1 | q7, q3 q2 q1 q7, q1 | qb6, q3 q2 q1 q7, q1 |
+q7, q1 q7, q1 q7, q1 | q7, qb7, q7, qb2 q2 q3 | #4 #4 #4 | #4 - 3 |
+3 2 2 | 2 - b2 | q3 q2 b2 7, | b2 0 - |
