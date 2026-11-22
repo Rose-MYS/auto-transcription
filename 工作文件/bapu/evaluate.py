@@ -107,6 +107,27 @@ def score_metrics(ref_xml: str, est_sc) -> dict:
     }
 
 
+def beat_metrics(beats_json: str, ana) -> dict:
+    """对照人工标注（ASAP）：小节线 F 值（容差 ±70ms）、节拍 F 值、每小节拍数是否对。"""
+    import json
+    ref = json.loads(open(beats_json, encoding="utf-8").read())
+    clip = ref.get("clip_seconds", 1e9)
+    est_bars = np.array([t for t in ana.info["bar_times"] if t <= clip])
+    est_beats = np.array([t for t in ana.info["beat_times"] if t <= clip])
+    rb, rd = np.array(ref["beats"]), np.array(ref["downbeats"])
+    ts = ref["time_signatures"][0][1] if ref["time_signatures"] else "4/4"
+    num = int(ts.split("/")[0])
+    accept = {num, {12: 4, 6: 2, 9: 3}.get(num, num)}
+    if num in (2, 4):
+        accept |= {2, 4}
+    if num == 6:
+        accept |= {3, 6}
+    return {"ref_ts": ts, "est_ts": f"{ana.beats_per_bar}/4", "meter_ok": ana.beats_per_bar in accept,
+            "beat_F": round(mir_eval.beat.f_measure(rb, est_beats), 3),
+            "bar_F": round(mir_eval.beat.f_measure(rd, est_bars), 3),
+            "meter_source": ana.info.get("meter_source")}
+
+
 def meta_metrics(song_id: str, ana) -> dict:
     meta = META.get(song_id[:5])
     if not meta:

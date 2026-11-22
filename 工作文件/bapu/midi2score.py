@@ -379,10 +379,38 @@ def choose_clef(events):
     return clef.TrebleClef() if not ps or np.median(ps) >= 57 else clef.BassClef()
 
 
-def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True):
+def meter_from_downbeats(beats: np.ndarray, downbeats: np.ndarray):
+    """用音频模型给的强拍时间推出每小节几拍、强拍落在第几拍。"""
+    if downbeats is None or len(downbeats) < 3:
+        return None
+    idx = np.array([int(np.argmin(np.abs(beats - d))) for d in downbeats])
+    idx = np.unique(idx)
+    gaps = np.diff(idx)
+    gaps = gaps[(gaps >= 2) & (gaps <= 6)]
+    if len(gaps) == 0:
+        return None
+    M = int(np.bincount(gaps).argmax())
+    if M not in (2, 3, 4, 6):
+        return None
+    if M == 6:              # 6 拍一小节多半是 6/8 或 2 个 3 拍，记成 3 拍、相位不变
+        M = 3
+    ph = int(np.bincount(idx % M, minlength=M).argmax())
+    return M, ph
+
+
+def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
+                        beats_ext=None, downbeats_ext=None):
+    """beats_ext / downbeats_ext：音频节拍模型（beat_this）给出的节拍、强拍时间（秒）。
+    给了就用它们定节拍网格和小节线；不给就从音符本身推断（适合速度稳定的曲子）。"""
     notes = load_notes(midi_path)
-    beats, regular = track_beats(notes)
-    beats = fix_tempo_octave(beats, notes)
+    if beats_ext is not None and len(beats_ext) >= 8:
+        beats = np.asarray(beats_ext, dtype=float)
+        ibis = np.diff(beats)
+        regular = bool(np.std(ibis) / np.mean(ibis) < 0.06)
+        beats = extend_beats(beats, notes)
+    else:
+        beats, regular = track_beats(notes)
+        beats = fix_tempo_octave(beats, notes)
     pos_on = to_beat_pos(notes[:, 0], beats)
     pos_off = to_beat_pos(notes[:, 1], beats)
     on_q = quantize_onsets(pos_on, triplets=triplets)
@@ -398,6 +426,13 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True):
     nbeats = int(max(n.onset for n in qnotes)) + 1
     first_beat = int(np.floor(float(min(n.onset for n in qnotes))))
     M, ph, mscores = detect_meter(beat_features(qnotes, nbeats), first_beat)
+    meter_src = "notes"
+    ext = meter_from_downbeats(beats, np.asarray(downbeats_ext, float)) if downbeats_ext is not None else None
+    if ext:
+        M, ph = ext
+        meter_src = "audio_downbeats"
+    # 小节线在原音频里的时间（测评用）
+    bar_times = [float(beats[b]) for b in range(len(beats)) if (b - ph) % M == 0]
     # 让检测到的强拍落在小节线上，再去掉开头整小节的空白
     shift = Fraction((M - ph) % M)
     first = min(n.onset for n in qnotes)
@@ -437,5 +472,7 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True):
                    key_name=f"{k.tonic.name} {k.mode}", key_sharps=k.sharps,
                    single_staff=single, beat_regular=regular,
                    info={"meter_scores": {f"{a}/{b}": round(c, 3) for (a, b), c in mscores.items()},
-                         "n_notes": len(qnotes), "n_beats": int(len(beats))})
+                         "n_notes": len(qnotes), "n_beats": int(len(beats)), "meter_source": meter_src,
+                         "beat_times": [round(float(b), 3) for b in beats],
+                         "bar_times": [round(t, 3) for t in bar_times]})
     return sc, qnotes, ana

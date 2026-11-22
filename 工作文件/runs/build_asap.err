@@ -1,0 +1,97 @@
+Traceback (most recent call last):
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+                             " response")
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\util\retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+                             " response")
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "Z:\claude-share\projects\20261120-全自动扒谱\工作文件\bapu\build_asap_set.py", line 135, in <module>
+    main()
+    ~~~~^^
+  File "Z:\claude-share\projects\20261120-全自动扒谱\工作文件\bapu\build_asap_set.py", line 113, in main
+    pm = pretty_midi.PrettyMIDI(io.BytesIO(zf.read(mid)))
+                                           ~~~~~~~^^^^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1616, in read
+    return fp.read()
+           ~~~~~~~^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1017, in read
+    buf += self._read1(self.MAX_N)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1099, in _read1
+    data += self._read2(n - len(data))
+            ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1131, in _read2
+    data = self._fileobj.read(n)
+  File "C:\Users\ClaudeVM2\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 850, in read
+    data = self._file.read(n)
+  File "Z:\claude-share\projects\20261120-全自动扒谱\工作文件\bapu\build_asap_set.py", line 65, in read
+    r = self.s.get(self.url, headers={"Range": f"bytes={self.pos}-{end}"}, timeout=120)
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\requests\sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\ClaudeVM2\venvs\bapu\Lib\site-packages\requests\adapters.py", line 711, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
