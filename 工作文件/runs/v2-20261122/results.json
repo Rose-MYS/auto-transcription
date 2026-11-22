@@ -1,0 +1,1914 @@
+[
+ {
+  "song": "L1-01_twinkle_flute",
+  "transcribe": {
+   "model": "pyin",
+   "agreement": 0.0,
+   "piano": {
+    "seconds": 66.3,
+    "audio_seconds": 34.7,
+    "n_notes": 0
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 22.6,
+    "n_notes": 48
+   }
+  },
+  "note_level": {
+   "P": 0.188,
+   "R": 0.214,
+   "F1": 0.2,
+   "F1_with_offset": 0.067,
+   "n_ref": 42,
+   "n_est": 48
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.0
+  },
+  "audio": {
+   "bpm": 89.6,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": false,
+   "seconds": 3.7,
+   "meter_scores": {
+    "2/0": 1.596,
+    "2/1": -1.446,
+    "3/0": 0.21,
+    "3/1": 0.025,
+    "3/2": -0.085,
+    "4/0": 1.165,
+    "4/1": -0.993,
+    "4/2": 0.889,
+    "4/3": -0.958
+   },
+   "n_notes": 48,
+   "n_beats": 53,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": false,
+    "med_r": 0.0371,
+    "p75_r": 0.0618,
+    "drift": 0.0646,
+    "mono": true,
+    "n_notes": 48
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.6,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.37,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  },
+  "oracle": {
+   "bpm": 90.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.8,
+   "meter_scores": {
+    "2/0": 1.722,
+    "2/1": -1.572,
+    "3/0": 0.004,
+    "3/1": 0.075,
+    "3/2": 0.075,
+    "4/0": 1.335,
+    "4/1": -0.957,
+    "4/2": 0.886,
+    "4/3": -1.17
+   },
+   "n_notes": 42,
+   "n_beats": 49,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0009,
+    "p75_r": 0.001,
+    "drift": 0.0004,
+    "mono": true,
+    "n_notes": 42
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  }
+ },
+ {
+  "song": "L1-02_ode_to_joy_violin",
+  "transcribe": {
+   "model": "pyin",
+   "agreement": 0.0,
+   "piano": {
+    "seconds": 16.3,
+    "audio_seconds": 21.8,
+    "n_notes": 11
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 3.1,
+    "n_notes": 30
+   }
+  },
+  "note_level": {
+   "P": 0.667,
+   "R": 0.667,
+   "F1": 0.667,
+   "F1_with_offset": 0.667,
+   "n_ref": 30,
+   "n_est": 30
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 1.0
+  },
+  "audio": {
+   "bpm": 100.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": false,
+   "seconds": 0.3,
+   "meter_scores": {
+    "2/0": 0.493,
+    "2/1": -0.343,
+    "3/0": 0.116,
+    "3/1": 0.101,
+    "3/2": -0.067,
+    "4/0": 0.255,
+    "4/1": -0.631,
+    "4/2": 0.344,
+    "4/3": 0.196
+   },
+   "n_notes": 30,
+   "n_beats": 37,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": false,
+    "med_r": 0.0494,
+    "p75_r": 0.0865,
+    "drift": 0.0242,
+    "mono": true,
+    "n_notes": 30
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.933,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.893,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  },
+  "oracle": {
+   "bpm": 100.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.6,
+   "meter_scores": {
+    "2/0": 0.499,
+    "2/1": -0.349,
+    "3/0": 0.129,
+    "3/1": 0.093,
+    "3/2": -0.072,
+    "4/0": 0.26,
+    "4/1": -0.634,
+    "4/2": 0.348,
+    "4/3": 0.19
+   },
+   "n_notes": 30,
+   "n_beats": 34,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0008,
+    "p75_r": 0.0013,
+    "drift": 0.0019,
+    "mono": true,
+    "n_notes": 30
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  }
+ },
+ {
+  "song": "L1-03_twinkle_piano_melody",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 1.0,
+   "piano": {
+    "seconds": 31.9,
+    "audio_seconds": 34.8,
+    "n_notes": 50
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 2.7,
+    "n_notes": 42
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.952,
+   "n_ref": 42,
+   "n_est": 42
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.8
+  },
+  "audio": {
+   "bpm": 90.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.5,
+   "meter_scores": {
+    "2/0": 1.722,
+    "2/1": -1.572,
+    "3/0": 0.004,
+    "3/1": 0.075,
+    "3/2": 0.075,
+    "4/0": 1.333,
+    "4/1": -0.958,
+    "4/2": 0.888,
+    "4/3": -1.17
+   },
+   "n_notes": 42,
+   "n_beats": 50,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0016,
+    "p75_r": 0.0026,
+    "drift": 0.0011,
+    "mono": true,
+    "n_notes": 42
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  },
+  "oracle": {
+   "bpm": 90.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.4,
+   "meter_scores": {
+    "2/0": 1.722,
+    "2/1": -1.572,
+    "3/0": 0.004,
+    "3/1": 0.075,
+    "3/2": 0.075,
+    "4/0": 1.335,
+    "4/1": -0.957,
+    "4/2": 0.886,
+    "4/3": -1.17
+   },
+   "n_notes": 42,
+   "n_beats": 49,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0009,
+    "p75_r": 0.001,
+    "drift": 0.0004,
+    "mono": true,
+    "n_notes": 42
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  }
+ },
+ {
+  "song": "L2-01_twinkle_two_hands",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.067,
+   "piano": {
+    "seconds": 26.3,
+    "audio_seconds": 34.8,
+    "n_notes": 114
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 4.2,
+    "n_notes": 60
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.965,
+   "n_ref": 114,
+   "n_est": 114
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 3.2
+  },
+  "audio": {
+   "bpm": 90.1,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 1.5,
+   "meter_scores": {
+    "2/0": 1.514,
+    "2/1": -1.364,
+    "3/0": 0.029,
+    "3/1": 0.024,
+    "3/2": 0.101,
+    "4/0": 1.153,
+    "4/1": -0.665,
+    "4/2": 0.793,
+    "4/3": -1.19
+   },
+   "n_notes": 114,
+   "n_beats": 51,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0225,
+    "p75_r": 0.0311,
+    "drift": 0.06,
+    "mono": false,
+    "n_notes": 114
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.965,
+    "hand_acc": 0.965,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 90.1,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.8,
+   "meter_scores": {
+    "2/0": 1.514,
+    "2/1": -1.364,
+    "3/0": 0.029,
+    "3/1": 0.024,
+    "3/2": 0.101,
+    "4/0": 1.154,
+    "4/1": -0.665,
+    "4/2": 0.793,
+    "4/3": -1.19
+   },
+   "n_notes": 114,
+   "n_beats": 51,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.019,
+    "p75_r": 0.0296,
+    "drift": 0.0577,
+    "mono": false,
+    "n_notes": 114
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.965,
+    "hand_acc": 0.965,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L2-02_ode_to_joy_two_hands",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.433,
+   "piano": {
+    "seconds": 19.9,
+    "audio_seconds": 22.0,
+    "n_notes": 46
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 2.8,
+    "n_notes": 30
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.978,
+   "F1": 0.989,
+   "F1_with_offset": 0.901,
+   "n_ref": 46,
+   "n_est": 45
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 1.1
+  },
+  "audio": {
+   "bpm": 100.2,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.5,
+   "meter_scores": {
+    "2/0": 1.135,
+    "2/1": -0.985,
+    "3/0": 0.048,
+    "3/1": 0.139,
+    "3/2": -0.037,
+    "4/0": 0.868,
+    "4/1": -0.735,
+    "4/2": 0.573,
+    "4/3": -0.597
+   },
+   "n_notes": 45,
+   "n_beats": 35,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0194,
+    "p75_r": 0.031,
+    "drift": 0.0531,
+    "mono": false,
+    "n_notes": 45
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.989,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 100.2,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.6,
+   "meter_scores": {
+    "2/0": 1.141,
+    "2/1": -0.991,
+    "3/0": 0.036,
+    "3/1": 0.129,
+    "3/2": -0.016,
+    "4/0": 0.884,
+    "4/1": -0.739,
+    "4/2": 0.565,
+    "4/3": -0.602
+   },
+   "n_notes": 46,
+   "n_beats": 35,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0183,
+    "p75_r": 0.0273,
+    "drift": 0.0516,
+    "mono": false,
+    "n_notes": 46
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L2-03_bach_chorale_bwv66_6_piano",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.25,
+   "piano": {
+    "seconds": 24.9,
+    "audio_seconds": 25.3,
+    "n_notes": 160
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 3.7,
+    "n_notes": 64
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.945,
+   "F1": 0.972,
+   "F1_with_offset": 0.858,
+   "n_ref": 163,
+   "n_est": 154
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 0.9
+  },
+  "audio": {
+   "bpm": 96.0,
+   "meter": "4/4",
+   "key": "F# minor",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 1.0,
+   "meter_scores": {
+    "2/0": -0.261,
+    "2/1": 0.411,
+    "3/0": -0.048,
+    "3/1": -0.106,
+    "3/2": 0.315,
+    "4/0": -0.294,
+    "4/1": 0.309,
+    "4/2": -0.104,
+    "4/3": 0.239
+   },
+   "n_notes": 154,
+   "n_beats": 37,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0029,
+    "p75_r": 0.0045,
+    "drift": 0.0048,
+    "mono": false,
+    "n_notes": 154
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.972,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.838,
+    "hand_acc": 0.812,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 96.0,
+   "meter": "4/4",
+   "key": "F# minor",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 1.2,
+   "meter_scores": {
+    "2/0": -0.26,
+    "2/1": 0.41,
+    "3/0": -0.048,
+    "3/1": -0.104,
+    "3/2": 0.313,
+    "4/0": -0.294,
+    "4/1": 0.309,
+    "4/2": -0.103,
+    "4/3": 0.237
+   },
+   "n_notes": 154,
+   "n_beats": 37,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0008,
+    "p75_r": 0.0011,
+    "drift": 0.0009,
+    "mono": false,
+    "n_notes": 163
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.972,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.851,
+    "hand_acc": 0.812,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L3-01_bach_prelude_C_BWV846",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.44,
+   "piano": {
+    "seconds": 178.8,
+    "audio_seconds": 240.9,
+    "n_notes": 1963
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 35.1,
+    "n_notes": 800
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.993,
+   "F1": 0.996,
+   "F1_with_offset": 0.93,
+   "n_ref": 1925,
+   "n_est": 1911
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 9.6
+  },
+  "audio": {
+   "bpm": 115.4,
+   "meter": "2/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 12.3,
+   "meter_scores": {
+    "2/0": -0.392,
+    "2/1": 0.542,
+    "3/0": -0.012,
+    "3/1": 0.249,
+    "3/2": -0.087,
+    "4/0": -0.334,
+    "4/1": 0.475,
+    "4/2": -0.189,
+    "4/3": 0.198
+   },
+   "n_notes": 1908,
+   "n_beats": 428,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.074,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0433,
+    "p75_r": 0.0732,
+    "drift": 0.088,
+    "mono": true,
+    "n_notes": 1911
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "4/4",
+    "est_ts": "2/4",
+    "meter_ok": true
+   }
+  },
+  "oracle": {
+   "bpm": 115.4,
+   "meter": "2/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 5.7,
+   "meter_scores": {
+    "2/0": -0.365,
+    "2/1": 0.515,
+    "3/0": -0.008,
+    "3/1": 0.233,
+    "3/2": -0.075,
+    "4/0": -0.309,
+    "4/1": 0.44,
+    "4/2": -0.177,
+    "4/3": 0.196
+   },
+   "n_notes": 1922,
+   "n_beats": 428,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.051,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0427,
+    "p75_r": 0.0745,
+    "drift": 0.0596,
+    "mono": true,
+    "n_notes": 1925
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "4/4",
+    "est_ts": "2/4",
+    "meter_ok": true
+   }
+  }
+ },
+ {
+  "song": "L3-02_grieg_waltz_op38_7",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.409,
+   "piano": {
+    "seconds": 39.5,
+    "audio_seconds": 78.3,
+    "n_notes": 465
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 11.8,
+    "n_notes": 198
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.993,
+   "F1": 0.996,
+   "F1_with_offset": 0.783,
+   "n_ref": 405,
+   "n_est": 402
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 4.6
+  },
+  "audio": {
+   "bpm": 145.2,
+   "meter": "3/4",
+   "key": "E minor",
+   "key_sharps": 1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 5.8,
+   "meter_scores": {
+    "2/0": -0.039,
+    "2/1": 0.189,
+    "3/0": -0.591,
+    "3/1": 1.06,
+    "3/2": -0.315,
+    "4/0": 0.061,
+    "4/1": 0.052,
+    "4/2": -0.112,
+    "4/3": 0.15
+   },
+   "n_notes": 402,
+   "n_beats": 179,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0401,
+    "p75_r": 0.0738,
+    "drift": 0.1046,
+    "mono": true,
+    "n_notes": 402
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 1,
+    "est_key_sharps": 1,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true
+   }
+  },
+  "oracle": {
+   "bpm": 145.2,
+   "meter": "3/4",
+   "key": "E minor",
+   "key_sharps": 1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 4.5,
+   "meter_scores": {
+    "2/0": -0.043,
+    "2/1": 0.193,
+    "3/0": -0.62,
+    "3/1": 1.05,
+    "3/2": -0.276,
+    "4/0": 0.082,
+    "4/1": 0.073,
+    "4/2": -0.139,
+    "4/3": 0.134
+   },
+   "n_notes": 405,
+   "n_beats": 179,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0424,
+    "p75_r": 0.0767,
+    "drift": 0.1219,
+    "mono": false,
+    "n_notes": 405
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 1,
+    "est_key_sharps": 1,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true
+   }
+  }
+ },
+ {
+  "song": "L3-03_scarlatti_sonata_K525",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.382,
+   "piano": {
+    "seconds": 38.8,
+    "audio_seconds": 67.2,
+    "n_notes": 882
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 7.2,
+    "n_notes": 207
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.976,
+   "F1": 0.988,
+   "F1_with_offset": 0.939,
+   "n_ref": 882,
+   "n_est": 861
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.9
+  },
+  "audio": {
+   "bpm": 136.4,
+   "meter": "2/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 5.8,
+   "meter_scores": {
+    "2/0": -0.205,
+    "2/1": 0.355,
+    "3/0": 0.293,
+    "3/1": 0.006,
+    "3/2": -0.151,
+    "4/0": -0.147,
+    "4/1": 0.601,
+    "4/2": -0.175,
+    "4/3": -0.135
+   },
+   "n_notes": 861,
+   "n_beats": 148,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0437,
+    "p75_r": 0.0744,
+    "drift": 0.1305,
+    "mono": false,
+    "n_notes": 861
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "3/8",
+    "est_ts": "2/4",
+    "meter_ok": false
+   }
+  },
+  "oracle": {
+   "bpm": 136.4,
+   "meter": "2/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 4.2,
+   "meter_scores": {
+    "2/0": -0.199,
+    "2/1": 0.349,
+    "3/0": 0.28,
+    "3/1": -0.008,
+    "3/2": -0.123,
+    "4/0": -0.112,
+    "4/1": 0.576,
+    "4/2": -0.203,
+    "4/3": -0.116
+   },
+   "n_notes": 882,
+   "n_beats": 147,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0436,
+    "p75_r": 0.0734,
+    "drift": 0.1426,
+    "mono": false,
+    "n_notes": 882
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "3/8",
+    "est_ts": "2/4",
+    "meter_ok": false
+   }
+  }
+ },
+ {
+  "song": "L3-04_schubert_moment_musical_op94_3",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.259,
+   "piano": {
+    "seconds": 50.4,
+    "audio_seconds": 107.2,
+    "n_notes": 1076
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 6.2,
+    "n_notes": 316
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.972,
+   "F1": 0.986,
+   "F1_with_offset": 0.845,
+   "n_ref": 1034,
+   "n_est": 1005
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 4.1
+  },
+  "audio": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.8,
+   "meter_scores": {
+    "2/0": 1.002,
+    "2/1": -0.852,
+    "3/0": 0.211,
+    "3/1": 0.014,
+    "3/2": -0.076,
+    "4/0": 0.686,
+    "4/1": -0.42,
+    "4/2": 0.595,
+    "4/3": -0.723
+   },
+   "n_notes": 1004,
+   "n_beats": 159,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.958,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0401,
+    "p75_r": 0.069,
+    "drift": 0.3146,
+    "mono": false,
+    "n_notes": 1005
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -4,
+    "est_key_sharps": -4,
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true
+   }
+  },
+  "oracle": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.7,
+   "meter_scores": {
+    "2/0": 0.991,
+    "2/1": -0.841,
+    "3/0": 0.211,
+    "3/1": 0.012,
+    "3/2": -0.074,
+    "4/0": 0.644,
+    "4/1": -0.41,
+    "4/2": 0.623,
+    "4/3": -0.718
+   },
+   "n_notes": 1033,
+   "n_beats": 159,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.926,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0456,
+    "p75_r": 0.0753,
+    "drift": 0.0915,
+    "mono": false,
+    "n_notes": 1034
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -4,
+    "est_key_sharps": -4,
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true
+   }
+  }
+ },
+ {
+  "song": "L3-05_chopin_nocturne_op9_2",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.231,
+   "piano": {
+    "seconds": 101.8,
+    "audio_seconds": 224.7,
+    "n_notes": 1610
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 25.9,
+    "n_notes": 566
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.989,
+   "F1": 0.994,
+   "F1_with_offset": 0.632,
+   "n_ref": 1498,
+   "n_est": 1481
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 14.1
+  },
+  "audio": {
+   "bpm": 44.4,
+   "meter": "12/8",
+   "key": "E- major",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 12.0,
+   "meter_scores": {
+    "2/0": -0.199,
+    "2/1": 0.349,
+    "3/0": 0.068,
+    "3/1": -0.056,
+    "3/2": 0.139,
+    "4/0": -0.164,
+    "4/1": 0.271,
+    "4/2": -0.151,
+    "4/3": 0.194
+   },
+   "n_notes": 1405,
+   "n_beats": 147,
+   "beat_source": "beat_this",
+   "meter_source": "notes",
+   "compound": true,
+   "comp_ratio": 0.506,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0414,
+    "p75_r": 0.0728,
+    "drift": 0.1119,
+    "mono": false,
+    "n_notes": 1481
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3,
+    "ref_ts": "12/8",
+    "est_ts": "12/8",
+    "meter_ok": true
+   }
+  },
+  "oracle": {
+   "bpm": 44.8,
+   "meter": "12/8",
+   "key": "E- major",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 10.4,
+   "meter_scores": {
+    "2/0": -0.188,
+    "2/1": 0.338,
+    "3/0": 0.069,
+    "3/1": -0.068,
+    "3/2": 0.15,
+    "4/0": -0.159,
+    "4/1": 0.249,
+    "4/2": -0.141,
+    "4/3": 0.202
+   },
+   "n_notes": 1417,
+   "n_beats": 145,
+   "beat_source": "beat_this",
+   "meter_source": "notes",
+   "compound": true,
+   "comp_ratio": 0.506,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0417,
+    "p75_r": 0.0755,
+    "drift": 0.1265,
+    "mono": false,
+    "n_notes": 1498
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3,
+    "ref_ts": "12/8",
+    "est_ts": "12/8",
+    "meter_ok": true
+   }
+  }
+ },
+ {
+  "song": "L4-01_bach_prelude_C_BWV846",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.12,
+   "piano": {
+    "seconds": 74.2,
+    "audio_seconds": 90.0,
+    "n_notes": 427
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 10.9,
+    "n_notes": 301
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.739,
+   "n_ref": 379,
+   "n_est": 379
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 6.6
+  },
+  "audio": {
+   "bpm": 63.8,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 2.5,
+   "meter_scores": {
+    "2/0": 1.12,
+    "2/1": -0.97,
+    "3/0": 0.083,
+    "3/1": 0.051,
+    "3/2": 0.017,
+    "4/0": 1.186,
+    "4/1": -0.648,
+    "4/2": 0.249,
+    "4/3": -0.654
+   },
+   "n_notes": 379,
+   "n_beats": 96,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 2.912,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0387,
+    "p75_r": 0.0696,
+    "drift": 0.0408,
+    "mono": true,
+    "n_notes": 379
+   },
+   "beat_level": {
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "beat_F": 0.989,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  },
+  "oracle": {
+   "bpm": 63.8,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 3.2,
+   "meter_scores": {
+    "2/0": 1.117,
+    "2/1": -0.967,
+    "3/0": 0.079,
+    "3/1": 0.055,
+    "3/2": 0.018,
+    "4/0": 1.185,
+    "4/1": -0.647,
+    "4/2": 0.245,
+    "4/3": -0.651
+   },
+   "n_notes": 379,
+   "n_beats": 96,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 2.892,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0437,
+    "p75_r": 0.0752,
+    "drift": 0.0248,
+    "mono": true,
+    "n_notes": 379
+   },
+   "beat_level": {
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "beat_F": 0.989,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  }
+ },
+ {
+  "song": "L4-02_schubert_moment_musical_3",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.245,
+   "piano": {
+    "seconds": 73.1,
+    "audio_seconds": 90.0,
+    "n_notes": 948
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 9.8,
+    "n_notes": 273
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.968,
+   "F1": 0.984,
+   "F1_with_offset": 0.838,
+   "n_ref": 914,
+   "n_est": 885
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 6.6
+  },
+  "audio": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 5.7,
+   "meter_scores": {
+    "2/0": 1.024,
+    "2/1": -0.874,
+    "3/0": 0.214,
+    "3/1": -0.029,
+    "3/2": -0.035,
+    "4/0": 0.74,
+    "4/1": -0.441,
+    "4/2": 0.57,
+    "4/3": -0.733
+   },
+   "n_notes": 884,
+   "n_beats": 137,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.988,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0397,
+    "p75_r": 0.071,
+    "drift": 0.1839,
+    "mono": false,
+    "n_notes": 885
+   },
+   "beat_level": {
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "beat_F": 1.0,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  },
+  "oracle": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 6.0,
+   "meter_scores": {
+    "2/0": 1.011,
+    "2/1": -0.861,
+    "3/0": 0.213,
+    "3/1": -0.032,
+    "3/2": -0.032,
+    "4/0": 0.692,
+    "4/1": -0.429,
+    "4/2": 0.601,
+    "4/3": -0.727
+   },
+   "n_notes": 913,
+   "n_beats": 136,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.943,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.039,
+    "p75_r": 0.0678,
+    "drift": 0.0879,
+    "mono": false,
+    "n_notes": 914
+   },
+   "beat_level": {
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "beat_F": 1.0,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  }
+ },
+ {
+  "song": "L4-03_schubert_impromptu_op90_2",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.254,
+   "piano": {
+    "seconds": 74.3,
+    "audio_seconds": 90.0,
+    "n_notes": 1354
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 14.3,
+    "n_notes": 264
+   }
+  },
+  "note_level": {
+   "P": 0.998,
+   "R": 0.989,
+   "F1": 0.993,
+   "F1_with_offset": 0.916,
+   "n_ref": 1254,
+   "n_est": 1243
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 7.6
+  },
+  "audio": {
+   "bpm": 230.8,
+   "meter": "3/4",
+   "key": "E- minor",
+   "key_sharps": -6,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 12.2,
+   "meter_scores": {
+    "2/0": 0.265,
+    "2/1": -0.115,
+    "3/0": 0.699,
+    "3/1": 0.149,
+    "3/2": -0.701,
+    "4/0": 0.263,
+    "4/1": 0.09,
+    "4/2": 0.04,
+    "4/3": -0.246
+   },
+   "n_notes": 1243,
+   "n_beats": 348,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0419,
+    "p75_r": 0.0735,
+    "drift": 0.0393,
+    "mono": true,
+    "n_notes": 1243
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "beat_F": 0.971,
+    "bar_F": 0.987,
+    "meter_source": "audio_downbeats"
+   }
+  },
+  "oracle": {
+   "bpm": 230.8,
+   "meter": "3/4",
+   "key": "E- minor",
+   "key_sharps": -6,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 9.9,
+   "meter_scores": {
+    "2/0": 0.255,
+    "2/1": -0.105,
+    "3/0": 0.707,
+    "3/1": 0.207,
+    "3/2": -0.767,
+    "4/0": 0.266,
+    "4/1": 0.071,
+    "4/2": 0.024,
+    "4/3": -0.213
+   },
+   "n_notes": 1254,
+   "n_beats": 348,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0414,
+    "p75_r": 0.0723,
+    "drift": 0.1147,
+    "mono": true,
+    "n_notes": 1254
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "beat_F": 0.971,
+    "bar_F": 0.987,
+    "meter_source": "audio_downbeats"
+   }
+  }
+ },
+ {
+  "song": "L4-04_mozart_sonata_K332_1",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.549,
+   "piano": {
+    "seconds": 78.1,
+    "audio_seconds": 90.0,
+    "n_notes": 851
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 16.4,
+    "n_notes": 319
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.996,
+   "F1": 0.998,
+   "F1_with_offset": 0.942,
+   "n_ref": 805,
+   "n_est": 802
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 8.1
+  },
+  "audio": {
+   "bpm": 150.0,
+   "meter": "3/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 9.6,
+   "meter_scores": {
+    "2/0": 0.044,
+    "2/1": 0.106,
+    "3/0": -0.222,
+    "3/1": 0.873,
+    "3/2": -0.5,
+    "4/0": 0.084,
+    "4/1": 0.112,
+    "4/2": -0.025,
+    "4/3": -0.021
+   },
+   "n_notes": 802,
+   "n_beats": 228,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0463,
+    "p75_r": 0.0776,
+    "drift": 0.2089,
+    "mono": false,
+    "n_notes": 802
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "beat_F": 0.993,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  },
+  "oracle": {
+   "bpm": 150.0,
+   "meter": "3/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 7.8,
+   "meter_scores": {
+    "2/0": 0.046,
+    "2/1": 0.104,
+    "3/0": -0.226,
+    "3/1": 0.874,
+    "3/2": -0.496,
+    "4/0": 0.087,
+    "4/1": 0.118,
+    "4/2": -0.026,
+    "4/3": -0.03
+   },
+   "n_notes": 805,
+   "n_beats": 228,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0465,
+    "p75_r": 0.0759,
+    "drift": 0.226,
+    "mono": false,
+    "n_notes": 805
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "beat_F": 0.993,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  }
+ },
+ {
+  "song": "L4-05_chopin_berceuse_op57",
+  "transcribe": {
+   "model": "transkun",
+   "agreement": 0.206,
+   "piano": {
+    "seconds": 80.2,
+    "audio_seconds": 90.0,
+    "n_notes": 655
+   },
+   "melody": {
+    "model": "pyin",
+    "seconds": 15.0,
+    "n_notes": 238
+   }
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.592,
+   "n_ref": 601,
+   "n_est": 601
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 7.9
+  },
+  "audio": {
+   "bpm": 35.7,
+   "meter": "6/8",
+   "key": "C# major",
+   "key_sharps": 7,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 6.7,
+   "meter_scores": {
+    "2/0": 0.792,
+    "2/1": -0.642,
+    "3/0": 0.053,
+    "3/1": 0.201,
+    "3/2": -0.101,
+    "4/0": 0.577,
+    "4/1": -0.349,
+    "4/2": 0.419,
+    "4/3": -0.516
+   },
+   "n_notes": 595,
+   "n_beats": 54,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.519,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0406,
+    "p75_r": 0.0728,
+    "drift": 0.1799,
+    "mono": false,
+    "n_notes": 601
+   },
+   "beat_level": {
+    "ref_ts": "6/8",
+    "est_ts": "6/8",
+    "meter_ok": true,
+    "beat_F": 0.991,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  },
+  "oracle": {
+   "bpm": 35.7,
+   "meter": "6/8",
+   "key": "C# major",
+   "key_sharps": 7,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 4.3,
+   "meter_scores": {
+    "2/0": 0.795,
+    "2/1": -0.645,
+    "3/0": 0.05,
+    "3/1": 0.19,
+    "3/2": -0.087,
+    "4/0": 0.587,
+    "4/1": -0.335,
+    "4/2": 0.414,
+    "4/3": -0.535
+   },
+   "n_notes": 596,
+   "n_beats": 54,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.521,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0438,
+    "p75_r": 0.0717,
+    "drift": 0.2608,
+    "mono": true,
+    "n_notes": 601
+   },
+   "beat_level": {
+    "ref_ts": "6/8",
+    "est_ts": "6/8",
+    "meter_ok": true,
+    "beat_F": 0.991,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats"
+   }
+  }
+ }
+]
