@@ -1,0 +1,5 @@
+title=L1-02_ode_to_joy_violin
+1=Ab
+4/4
+
+s1'''' | s1'''' | s1'''' s1'''' s3''' | s4''' 0 - 0 q0 s0 |

@@ -1,0 +1,6 @@
+title=L2-01_twinkle_two_hands
+1=C
+4/4
+
+q1 q5 q5 q6 q6 | 5 q4 q4 q3 q3 q2 q2 | q5 q5 q4 q4 q3 q3 | 2 q5 q5 q4 q4 q3 q3 |
+2 q1 q5 q5 q6 q6 | 5 q4 q4 q3 q3 q2 q2 | 0 - - - |

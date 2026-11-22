@@ -1,0 +1,260 @@
+[
+ {
+  "song": "L2-01_twinkle_two_hands",
+  "transcribe": {
+   "cached_from": "dev-01"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.965,
+   "n_ref": 114,
+   "n_est": 114
+  },
+  "audio": {
+   "bpm": 90.1,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 9.5,
+   "meter_scores": {
+    "2/0": 1.514,
+    "2/1": -1.364,
+    "3/0": 0.029,
+    "3/1": 0.024,
+    "3/2": 0.101,
+    "4/0": 1.153,
+    "4/1": -0.665,
+    "4/2": 0.793,
+    "4/3": -1.19
+   },
+   "n_notes": 114,
+   "n_beats": 51,
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.921,
+    "hand_acc": 0.904,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 90.1,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.9,
+   "meter_scores": {
+    "2/0": 1.514,
+    "2/1": -1.364,
+    "3/0": 0.029,
+    "3/1": 0.024,
+    "3/2": 0.101,
+    "4/0": 1.154,
+    "4/1": -0.665,
+    "4/2": 0.793,
+    "4/3": -1.19
+   },
+   "n_notes": 114,
+   "n_beats": 51,
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.921,
+    "hand_acc": 0.904,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L2-02_ode_to_joy_two_hands",
+  "transcribe": {
+   "cached_from": "dev-01"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.978,
+   "F1": 0.989,
+   "F1_with_offset": 0.901,
+   "n_ref": 46,
+   "n_est": 45
+  },
+  "audio": {
+   "bpm": 100.2,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.6,
+   "meter_scores": {
+    "2/0": 1.135,
+    "2/1": -0.985,
+    "3/0": 0.048,
+    "3/1": 0.139,
+    "3/2": -0.037,
+    "4/0": 0.868,
+    "4/1": -0.735,
+    "4/2": 0.573,
+    "4/3": -0.597
+   },
+   "n_notes": 45,
+   "n_beats": 35,
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.989,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 100.2,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.5,
+   "meter_scores": {
+    "2/0": 1.141,
+    "2/1": -0.991,
+    "3/0": 0.036,
+    "3/1": 0.129,
+    "3/2": -0.016,
+    "4/0": 0.884,
+    "4/1": -0.739,
+    "4/2": 0.565,
+    "4/3": -0.602
+   },
+   "n_notes": 46,
+   "n_beats": 35,
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L2-03_bach_chorale_bwv66_6_piano",
+  "transcribe": {
+   "cached_from": "dev-01"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.945,
+   "F1": 0.972,
+   "F1_with_offset": 0.858,
+   "n_ref": 163,
+   "n_est": 154
+  },
+  "audio": {
+   "bpm": 96.0,
+   "meter": "4/4",
+   "key": "F# minor",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.9,
+   "meter_scores": {
+    "2/0": -0.261,
+    "2/1": 0.411,
+    "3/0": -0.048,
+    "3/1": -0.106,
+    "3/2": 0.315,
+    "4/0": -0.294,
+    "4/1": 0.309,
+    "4/2": -0.104,
+    "4/3": 0.239
+   },
+   "n_notes": 154,
+   "n_beats": 37,
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.972,
+    "beat_level": "ok",
+    "downbeat_ok": false,
+    "dur_acc": 0.831,
+    "hand_acc": 0.792,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 96.0,
+   "meter": "4/4",
+   "key": "F# minor",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.9,
+   "meter_scores": {
+    "2/0": -0.26,
+    "2/1": 0.41,
+    "3/0": -0.048,
+    "3/1": -0.104,
+    "3/2": 0.313,
+    "4/0": -0.294,
+    "4/1": 0.309,
+    "4/2": -0.103,
+    "4/3": 0.237
+   },
+   "n_notes": 154,
+   "n_beats": 37,
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ts_ok": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.972,
+    "beat_level": "ok",
+    "downbeat_ok": false,
+    "dur_acc": 0.844,
+    "hand_acc": 0.792,
+    "staves_ref_est": "2/2"
+   }
+  }
+ }
+]

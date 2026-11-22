@@ -18,3 +18,6 @@ desktop.ini
 
 # 大于 20MB 的文件（按约定不进 git）
 
+
+__pycache__/
+*.pyc

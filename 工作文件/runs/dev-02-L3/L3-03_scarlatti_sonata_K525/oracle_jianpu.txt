@@ -1,0 +1,14 @@
+title=L3-03_scarlatti_sonata_K525
+1=F
+4/4
+
+s5, s1 q1 q7, s6, q6, q5, | s4, q3, q4, s5, q6, q5 s1' s1' s5 | s4 s3 s4 s5 s5, s4 q4 q5 s4' q4' q3' | s2' q2' q1' s7 q7 q6 s5 q5 q4 s3 q4 q5 |
+s3 q3 q2 s1 q1 q7, | s3 q3 q5 s1' q1' q7 s3' s3' s2' s1' q3' q2' | s1' s7 s6 q7 | s7, q7, q2 s5 q5 q#4 s7 s7 s2' s5' q5' q#4' |
+s3' q3' q2' s1' s7 s6 s6 s5 sb2' s2' | q2' s#4 s#4 s5 s6 s6 s7 s1' s1' s7 | s2' s2' s#4 q#4 q5 s6 q6 q7 s1' s1' s7 | s2' s5' s5' q6 q3' s3' q#4 q7 s1' s7 s6 |
+s7 q2' s#4 q#4 q5 s6 q6 q7 s1' s1' s7 | s2' s2' s#4 q#4 q5 s6 q6 q7 s1' s1' s7 | s2' s5' s5' q6 q3' s3' q#4 q7 s1' q7 q6 | s5 q5 s5 q3 s3 |
+5, s7 s2' q3 q1' s7 q3 q6 | qb6 s1 s6 s7 q1' q2' q1' q2' q7 q6 | s7 s3 s1' q2' q7 q6 q7 q1' s2' q7 q6 | s7 s1' s1' s1' s1' s7 s6 sb3' q4 q2' s1' q4 qb7 |
+q6 qb7 s1' q2' qb3' q4 q2' qb3' q1' qb7 | q1' q2' qb3' q1' qb7 q1' q2' qb3' s1' | sb7 q1'. | q2 q2 sb2 q4 q4 s3 q6 q6 sb6 q1' q1' |
+s7 s3' s3' sb3' s5' q5' q#4' s3' q3' q2' s1' q7 q6 | s5 s#4 s3 q#4 s3 q3 qb3 | s5 q5 q#4 s7 q7 q6 s2' q2' qb2' s4' q4' q3' | s6' q6' qb6' s1'' q1'' q7' s6' q6' q5' s4' q3' q2' |
+s2' q1' q#4' s5' q5 q7 s2' s2' s3' s2' q5 q7 | s2' s1' s2' s3' s2' q5' s7 s7 s1' s2' | s2' q5' q4' s4' q3' s5' s5' s7 q7 q1' | s2' q2' q3' s4' s4' s3' s5' s1'' s1'' q2' q6' |
+s6' q7 q5' s4' s3' s2' s3' q5' s7 q7 q1' | s2' s2' s3' s4' s4' s3' s5' s5' s7 q7 q1' | s2' q2' q3' s4' s4' s3' s5' s1'' s1'' q2' q6' | s6' q7 q5' s4' s3' s2' s1' q1' s1' q6 |
+s6 q5 s3 q5 s4 s3 q5 | s4 q5 s4 s7 1'. | 0 - 0 q0 |

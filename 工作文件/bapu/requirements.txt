@@ -1,0 +1,10 @@
+music21==10.5.2
+mir_eval==0.8.2
+pretty_midi==0.2.11.post0
+librosa==1.0.1
+soundfile==0.14.0
+scipy==1.18.1
+numpy==2.5.5
+moduleconf==0.1.4
+tqdm
+soxr
