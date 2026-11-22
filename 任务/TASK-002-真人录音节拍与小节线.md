@@ -100,4 +100,4 @@ Antigravity / 2026-11-22
 
 ## 完成记录
 
-（分支 / commit / 报告路径）
+antigravity/beats-v2 / 4cd1c24 / 最终成品\v2-20261122\测评报告.md、工作文件\runs\v2-20261122\report.md
