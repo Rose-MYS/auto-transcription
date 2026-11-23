@@ -107,7 +107,7 @@ def score_metrics(ref_xml: str, est_sc) -> dict:
                 hand_ok += (s == rs)
     return {
         "key_ok": rks == eks, "ref_key_sharps": rks, "est_key_sharps": eks,
-        "ts_ok": rts == ets, "ref_ts": rts, "est_ts": ets,
+        "ts_ok": rts == ets, "meter_exact": rts == ets, "ref_ts": rts, "est_ts": ets,
         "score_note_F1": round(f1, 3),
         "beat_level": "ok" if scale == 1 else f"x{scale}",
         "downbeat_ok": bool(scale == 1 and rts == ets and (sh % bar) == 0),
@@ -133,7 +133,9 @@ def beat_metrics(beats_json: str, ana) -> dict:
     if num == 6:
         accept |= {3, 6}
     est_ts = getattr(ana, "time_sig", f"{ana.beats_per_bar}/4")
-    out = {"ref_ts": ts, "est_ts": est_ts, "meter_ok": (est_ts == ts) or (ana.beats_per_bar in accept),
+    out = {"ref_ts": ts, "est_ts": est_ts,
+           "meter_ok": (est_ts == ts) or (ana.beats_per_bar in accept),
+           "meter_exact": est_ts == ts,
            "beat_F": round(mir_eval.beat.f_measure(rb, est_beats), 3),
            "bar_F": round(mir_eval.beat.f_measure(rd, est_bars), 3),
            "meter_source": ana.info.get("meter_source")}
@@ -161,15 +163,17 @@ def meta_metrics(song_id: str, ana, meta_json: str | None = None) -> dict:
     ref_ts = meta.get("ts")
     key_ok = _key_sharps_ok(ana.key_sharps, ref_ks) if isinstance(ref_ks, int) else None
     meter_ok = None
+    meter_exact = None
     if ref_ts and ref_ts != "unknown":
         num = int(ref_ts.split("/")[0])
         accept = {num, {12: 4, 6: 2, 9: 3}.get(num, num)}
         if num in (2, 4):
             accept |= {2, 4}
         meter_ok = (est_ts == ref_ts) or (ana.beats_per_bar in accept)
+        meter_exact = est_ts == ref_ts
     return {"key_ok": key_ok, "ref_key_sharps": ref_ks,
             "est_key_sharps": ana.key_sharps, "ref_ts": ref_ts, "est_ts": est_ts,
-            "meter_ok": meter_ok}
+            "meter_ok": meter_ok, "meter_exact": meter_exact}
 
 
 def readability_metrics(sc) -> dict:

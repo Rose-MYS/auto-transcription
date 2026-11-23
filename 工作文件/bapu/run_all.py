@@ -109,25 +109,34 @@ def fmt_row(r: dict, src: str) -> str:
     nl = r.get("note_level", {})
     if "score_level" in s:
         m = s["score_level"]
+        exact = m.get("meter_exact", m["ts_ok"])
         return (f"| {r['song']} | {nl.get('F1', '')} | {'✓' if m['key_ok'] else '✗'} | "
                 f"{m['est_ts']}{'' if m['ts_ok'] else ' ✗(' + m['ref_ts'] + ')'} | "
+                f"{'✓' if exact else '✗'} | "
                 f"{m['score_note_F1']} | {'✓' if m['downbeat_ok'] else '✗'} | {m['beat_level']} | "
                 f"{m['dur_acc']} | {m['hand_acc'] if m['hand_acc'] is not None else '—'} |")
     if "beat_level" in s:
         m = s["beat_level"]
         kmark = ('✓' if m["key_ok"] else '✗') if "key_ok" in m else '—'
+        exact = m.get("meter_exact")
+        emark = '—' if exact is None else ('✓' if exact else '✗')
         return (f"| {r['song']} | {nl.get('F1', '')} | {kmark} | "
                 f"{m['est_ts']}{' ✓' if m['meter_ok'] else ' ✗(' + m['ref_ts'] + ')'} | "
+                f"{emark} | "
                 f"节拍F {m['beat_F']} | 小节线F {m['bar_F']} | — | — | — |")
     m = s.get("meta_level", {})
     kok = m.get("key_ok")
     kmark = '—' if kok is None else ('✓' if kok else '✗')
     mok = m.get("meter_ok")
     ts_str = m.get("est_ts", "")
-    if mok is False:
+    if mok is True:
+        ts_str += " ✓"
+    elif mok is False:
         ts_str += f" ✗({m.get('ref_ts', '')})"
+    exact = m.get("meter_exact")
+    emark = '—' if exact is None else ('✓' if exact else '✗')
     return (f"| {r['song']} | {nl.get('F1', '—')} | {kmark} | "
-            f"{ts_str} | — | — | — | — | — |")
+            f"{ts_str} | {emark} | — | — | — | — | — |")
 
 
 def fmt_read_row(r: dict) -> str:
@@ -144,8 +153,8 @@ def fmt_read_row(r: dict) -> str:
 
 
 def write_report(results: list, out: Path):
-    head = ("| 曲目 | 转写音符F1 | 调号 | 拍号 | 谱面音符F1 | 小节线对齐 | 拍子层级 | 时值准确率 | 左右手准确率 |\n"
-            "|---|---|---|---|---|---|---|---|---|")
+    head = ("| 曲目 | 转写音符F1 | 调号 | 拍号 | 严格拍号 | 谱面音符F1 | 小节线对齐 | 拍子层级 | 时值准确率 | 左右手准确率 |\n"
+            "|---|---|---|---|---|---|---|---|---|---|")
     lines = [f"# 测评结果 {out.name}", "",
              "## A. 完整流程：音频 → 谱子", "", head] + [fmt_row(r, "audio") for r in results if "audio" in r]
     lines += ["", "## B. 只测“MIDI→谱子”：用标准答案 MIDI 作输入", "", head] + \
