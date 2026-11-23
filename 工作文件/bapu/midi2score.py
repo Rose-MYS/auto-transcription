@@ -583,14 +583,18 @@ def is_mechanical_tempo(notes: np.ndarray, note_beats: np.ndarray, beat_regular:
     on_r = np.round(notes[:, 0], 2)
     _, counts = np.unique(on_r, return_counts=True)
     mono = float(np.mean(counts > 1)) < 0.1 if len(counts) else True
+    vels = notes[:, 3] if len(notes) else np.array([64.0])
+    vel_std = float(np.std(vels))
+    vel_iqr = float(np.percentile(vels, 75) - np.percentile(vels, 25))
     mechanical = bool(
-        (beat_regular and med_r < 0.032 and p75_r < 0.055)
+        (beat_regular and med_r < 0.032 and p75_r < 0.055 and vel_std < 5.0 and vel_iqr <= 6.5)
         or (mono and len(notes) < 100 and med_r < 0.055 and drift < 0.08)
     )
     info = {
         "mechanical": mechanical, "beat_regular": bool(beat_regular),
         "med_r": round(med_r, 4), "p75_r": round(p75_r, 4),
         "drift": round(drift, 4), "mono": mono, "n_notes": int(len(notes)),
+        "vel_std": round(vel_std, 2), "vel_iqr": round(vel_iqr, 2),
     }
     return mechanical, info
 
@@ -613,25 +617,43 @@ def _best_bar_subdivision(d_times: np.ndarray, notes: np.ndarray) -> int:
     return best_k
 
 
-def _detect_compound(beats: np.ndarray, notes: np.ndarray) -> tuple[str, float]:
-    """检测拍内是否呈三等分/六等分复拍子律动（如 6/8、12/8 或快一拍一小节 3/8）。"""
+def _detect_compound(beats: np.ndarray, notes: np.ndarray) -> tuple[bool, float, dict]:
+    """检测拍内是否呈三等分/六等分复拍子律动（如 6/8、12/8 或快一拍一小节 3/8），基于三连音节拍占比而非固定 bpm 上限。"""
     bpm = 60.0 / float(np.median(np.diff(beats)))
     pos = to_beat_pos(notes[:, 0], beats)
+    beat_of = np.floor(pos + 1 / 12).astype(int)
+    n_multi = 0
+    n_tri = 0
+    for b in np.unique(beat_of):
+        sel = np.where(beat_of == b)[0]
+        if len(sel) < 2:
+            continue
+        fb = pos[sel] - b
+        uniq = _cluster_onsets(fb)
+        if len(uniq) < 2:
+            continue
+        n_multi += 1
+        if len(uniq) >= 3:
+            slots3 = {int(round(u * 3)) % 3 for u in uniq}
+            if slots3 == {0, 1, 2}:
+                ee3 = float(np.mean(np.abs(fb - np.round(fb * 3) / 3)))
+                ee4 = float(np.mean(np.abs(fb - np.round(fb * 4) / 4)))
+                if ee3 < 0.55 * ee4:
+                    n_tri += 1
+    tf = n_tri / max(1, n_multi)
+
     frac = pos - np.floor(pos)
     non_on = np.abs(frac - np.round(frac)) > 0.1
     if np.sum(non_on) < 8:
-        return "", 1.0
+        return False, 1.0, {"tf": round(tf, 3), "r3": 1.0, "r6": 1.0, "bpm": round(bpm, 1)}
     f = frac[non_on]
     e4 = float(np.mean(np.abs(f - np.round(f * 4) / 4)))
     e3 = float(np.mean(np.abs(f - np.round(f * 3) / 3)))
     e6 = float(np.mean(np.abs(f - np.round(f * 6) / 6)))
     r6 = e6 / (e4 + 1e-9)
     r3 = e3 / (e4 + 1e-9)
-    if bpm < 120.0 and r6 < 0.62:
-        return "compound_slow", round(r6, 3)
-    if 115.0 <= bpm < 175.0 and r3 < 0.65 and r6 < 0.62:
-        return "compound_38", round(r3, 3)
-    return "", round(r6, 3)
+    is_comp = bool(n_multi >= 4 and tf >= 0.20 and r3 < 1.0 and r6 < 0.60 and bpm < 160.0)
+    return is_comp, round(r6, 3), {"tf": round(tf, 3), "r3": round(r3, 3), "r6": round(r6, 3), "bpm": round(bpm, 1)}
 
 
 def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
@@ -656,10 +678,14 @@ def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
     gap1_frac = float(np.mean(gaps == 1)) if len(gaps) else 0.0
 
     # 2. 处理 gap==1 主导的情况
-    #    - 若 med_ibi < 1.05s（如华尔兹一拍一小节），按小节间隔细分出拍点（k=2/3/4）并保留强拍位置
-    #    - 若 med_ibi >= 1.05s（慢速复拍子如 12/8），保留强拍作慢拍，交由后续复拍子 + detect_meter 处理
+    #    - 若非复拍子慢拍且 med_ibi < 1.5s（如华尔兹一拍一小节或慢速 4/4），按小节间隔细分出拍点（k=2/3/4）并保留强拍位置
+    #    - 若本身已是复拍子慢拍（如 12/8），保留强拍作慢拍，交由后续复拍子 + detect_meter 处理
     subdivided_from_bar = False
-    if len(gaps) >= 4 and gap1_frac >= 0.40 and med_ibi < 1.05:
+    sub_k = None
+    raw_comp = False
+    if len(gaps) >= 4 and gap1_frac >= 0.40 and med_ibi < 1.5:
+        raw_comp, _, _ = _detect_compound(beats, notes)
+    if len(gaps) >= 4 and gap1_frac >= 0.40 and med_ibi < 1.5 and not raw_comp:
         d_times = beats[db_idx]
         k = _best_bar_subdivision(d_times, notes)
         new_beats = []
@@ -671,11 +697,25 @@ def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
         beats = np.array(new_beats, dtype=float)
         db_idx = np.arange(0, len(beats), k, dtype=int)
         subdivided_from_bar = True
+        sub_k = k
 
-    # 3. 清洗强拍序列并按每小节锁定 M 拍，防止个别多拍/少拍导致全曲小节线漂移
+    # 计算强拍周期纯度：纯度太低说明 beat_this 强拍不稳定，不宜强行锁死小节线
+    raw_gaps = np.diff(db_idx) if len(db_idx) >= 2 else np.array([], dtype=int)
+    valid_raw = raw_gaps[(raw_gaps >= 2) & (raw_gaps <= 6)]
+    dom_m = None
+    if subdivided_from_bar:
+        purity = 1.0
+        dom_m = sub_k
+    elif len(valid_raw):
+        dom_m = int(np.bincount(valid_raw).argmax())
+        purity = float(np.sum(raw_gaps == dom_m) / max(1, len(raw_gaps)))
+    else:
+        purity = 0.0
+
+    # 3. 清洗强拍序列并按每小节锁定 M 拍（仅当强拍纯度 >= 0.55 时锁定，否则交由 detect_meter 联合打分）
     M_ext, ph_ext = None, None
     bar_locked = False
-    if len(db_idx) >= 3 and not (gap1_frac >= 0.40 and not subdivided_from_bar):
+    if len(db_idx) >= 3 and not (gap1_frac >= 0.40 and not subdivided_from_bar) and (subdivided_from_bar or purity >= 0.55):
         d_times = beats[db_idx]
         med_bar = float(np.median(np.diff(d_times)))
         clean_d = [d_times[0]]
@@ -724,21 +764,21 @@ def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
         ph_ext = int(np.argmin(np.abs(beats - d_times[0]))) % M_ext
 
     # 4. 补足前后拍点后，再检查前后是否需要调整（不破坏强拍位置）
-    if not bar_locked and len(db_idx) >= 3 and not (gap1_frac >= 0.40 and not subdivided_from_bar):
+    if not bar_locked and len(db_idx) >= 3 and not (gap1_frac >= 0.40 and not subdivided_from_bar) and purity >= 0.55:
         ext = meter_from_downbeats(beats, d_times if len(downs) else None)
         if ext:
             M_ext, ph_ext = ext
 
     # 5. 复拍子与倍频修正（保持强拍位置不变）
-    comp_kind, comp_ratio = _detect_compound(beats, notes)
-    if comp_kind == "compound_38" and M_ext == 2:
+    is_comp, comp_ratio, comp_meta = _detect_compound(beats, notes)
+    if is_comp and M_ext == 2 and 115.0 <= comp_meta["bpm"] < 175.0 and comp_meta["r3"] < 0.65:
         start = ph_ext % 2
         beats = beats[start::2]
         M_ext = 1
         ph_ext = 0
         compound = "compound_38"
     else:
-        compound = comp_kind == "compound_slow"
+        compound = is_comp
 
     bpm = 60.0 / float(np.median(np.diff(beats)))
     ioi = np.diff(np.unique(np.round(notes[:, 0], 2)))
@@ -757,7 +797,14 @@ def refine_audio_beats(beats_ext, downbeats_ext, notes: np.ndarray):
             M_ext = M_ext // 2
             ph_ext = (ph_ext - start) // 2
 
-    return beats, M_ext, ph_ext, compound, comp_ratio
+    ref_info = {
+        "purity": round(purity, 3),
+        "dom_m": dom_m,
+        "subdivided_from_bar": subdivided_from_bar,
+        "sub_k": sub_k,
+        "comp_meta": comp_meta,
+    }
+    return beats, M_ext, ph_ext, compound, comp_ratio, ref_info
 
 
 def meter_from_downbeats(beats: np.ndarray, downbeats: np.ndarray):
@@ -799,8 +846,9 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
     compound = False
     comp_ratio = 1.0
     M_ext = ph_ext = None
+    ref_info = {}
     if use_ext:
-        beats, M_ext, ph_ext, compound, comp_ratio = refine_audio_beats(beats_ext, downbeats_ext, notes)
+        beats, M_ext, ph_ext, compound, comp_ratio, ref_info = refine_audio_beats(beats_ext, downbeats_ext, notes)
         ibis = np.diff(beats)
         regular = bool(np.std(ibis) / np.mean(ibis) < 0.06)
         beat_src = "beat_this"
@@ -826,11 +874,35 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
 
     nbeats = int(max(n.onset for n in qnotes)) + 1
     first_beat = int(np.floor(float(min(n.onset for n in qnotes))))
-    M, ph, mscores = detect_meter(beat_features(qnotes, nbeats), first_beat)
+    feats = beat_features(qnotes, nbeats)
+    M, ph, mscores = detect_meter(feats, first_beat)
     meter_src = "notes"
     if use_ext and M_ext is not None:
         M, ph = M_ext, ph_ext
         meter_src = "audio_downbeats"
+    elif use_ext and M_ext is None and ref_info.get("dom_m") == 3:
+        c3 = max((mscores[(3, p)], p) for p in range(3))
+        c4 = max((mscores[(4, p)], p) for p in range(4))
+        if c3[0] >= c4[0] * 0.90:
+            M, ph = 3, c3[1]
+            meter_src = "audio_downbeats+notes"
+
+    # 联合打分消歧 6/8 vs 12/8 与 2/4 vs 4/4（保持强拍相位对齐）
+    if use_ext and is_comp and compound != "compound_38" and M == 2:
+        ho = _z(feats["harm"]) + _z(feats["onset"])
+        q0, q2 = ph % 4, (ph + 2) % 4
+        s0, s2 = ho[q0::4], ho[q2::4]
+        if len(s0) and len(s2):
+            m0, m2 = float(s0.mean()), float(s2.mean())
+            if abs(m0 - m2) >= 0.45:
+                M = 4
+                ph = q0 if m0 >= m2 else q2
+                meter_src = "audio_downbeats+notes"
+    elif use_ext and not is_comp and M == 2:
+        if ref_info.get("subdivided_from_bar") or ref_info.get("purity", 1.0) < 0.85:
+            M = 4
+            ph = max([ph, (ph + 2) % 4], key=lambda q: mscores[(4, q)] + 0.15 * ((first_beat - q) % 4 == 0))
+            meter_src = "audio_downbeats+notes"
 
     # 小节线在原音频里的时间（测评用）
     bar_times = [float(beats[b]) for b in range(len(beats)) if (b - ph) % M == 0]
@@ -838,13 +910,14 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
     shift = Fraction((M - ph) % M)
     first = min(n.onset for n in qnotes)
     shift -= int((first + shift) // M) * M
-    beat_ql = Fraction(3, 2) if is_comp else Fraction(1)
+    fast_38 = bool(use_ext and not is_comp and M == 3 and ref_info.get("subdivided_from_bar") and bpm >= 200.0)
+    beat_ql = Fraction(3, 2) if is_comp else (Fraction(1, 2) if fast_38 else Fraction(1))
     for n in qnotes:
         n.onset = (n.onset + shift) * beat_ql
         n.dur = n.dur * beat_ql
 
     ts_num = 3 * M if is_comp else M
-    ts_den = 8 if is_comp else 4
+    ts_den = 8 if (is_comp or fast_38) else 4
     time_sig = f"{ts_num}/{ts_den}"
     bar_ql = Fraction(ts_num * 4, ts_den)
 
@@ -889,6 +962,7 @@ def transcribe_to_score(midi_path: str, title: str = "", triplets: bool = True,
                          "n_notes": len(qnotes), "n_beats": int(len(beats)),
                          "beat_source": beat_src, "meter_source": meter_src,
                          "compound": is_comp, "comp_ratio": comp_ratio,
+                         **({"downbeat_purity": ref_info["purity"]} if "purity" in ref_info else {}),
                          **({"beat_auto_info": auto_info} if auto_info else {}),
                          "beat_times": [round(float(b), 3) for b in beats],
                          "bar_times": [round(t, 3) for t in bar_times]})
