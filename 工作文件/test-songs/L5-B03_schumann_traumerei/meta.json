@@ -1,0 +1,19 @@
+{
+  "id": "L5-B03",
+  "category": "B_PublicDomain_Classical",
+  "title": "Kinderszenen Op. 15 No. 7 (Träumerei)",
+  "composer": "Robert Schumann",
+  "performer": "Artur Schnabel (1947)",
+  "source_url": "https://archive.org/details/schumann-op-15-vii-schnabel-1947",
+  "download_url": "https://archive.org/download/schumann-op-15-vii-schnabel-1947/schumann%20op15-vii%20(schnabel%201947).mp3",
+  "license": "Public Domain (1947)",
+  "ref_key_sharps": -1,
+  "ref_key_name": "F major",
+  "ref_ts": "4/4",
+  "pickup": true,
+  "rubato": true,
+  "audio_quality": "historical_noisy",
+  "clip_start": 0.0,
+  "clip_end": 75.0,
+  "maestro_overlap": false
+}

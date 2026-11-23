@@ -37,7 +37,8 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
     sid = song.name
     out.mkdir(parents=True, exist_ok=True)
     res = {"song": sid}
-    audio = next(p for p in (song / "audio.mp3", song / "audio.flac", song / "audio.wav") if p.exists())
+    audio = next(p for p in (song / "audio.mp3", song / "audio.flac", song / "audio.wav",
+                             song / "audio.ogg", song / "audio.oga", song / "audio.m4a") if p.exists())
     est_mid = out / "transcribed.mid"
     cached = cache / sid / "transcribed.mid" if cache else None
     if cached and cached.exists():
@@ -46,7 +47,9 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
     else:
         from bapu import audio2midi
         res["transcribe"] = audio2midi.transcribe_auto(str(audio), str(est_mid), MODE)
-    res["note_level"] = evaluate.note_metrics(str(song / "answer.mid"), str(est_mid))
+    ans_mid = song / "answer.mid"
+    if ans_mid.exists():
+        res["note_level"] = evaluate.note_metrics(str(ans_mid), str(est_mid))
 
     # 节拍/强拍：可选用音频模型（beat_this），结果缓存为 beats_audio.json
     bt = None
@@ -64,11 +67,13 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
 
     ans_xml = song / "answer.musicxml"
     ref_beats = song / "beats.json"
+    meta_json = song / "meta.json"
     if ans_xml.exists():
         from music21 import converter
         res["ref_readability"] = evaluate.readability_metrics(converter.parse(str(ans_xml)))
     beats_mode = "none" if BEATS == "none" else ("auto" if BEATS == "auto" else "ext")
-    for src, mid in (("audio", est_mid), ("oracle", song / "answer.mid")):
+    sources = [("audio", est_mid)] + ([("oracle", ans_mid)] if ans_mid.exists() else [])
+    for src, mid in sources:
         t0 = time.time()
         sc, qn, ana = midi2score.transcribe_to_score(
             str(mid), title=sid, beats_ext=bt["beats"] if bt else None,
@@ -92,7 +97,7 @@ def process_song(song: Path, out: Path, cache: Path | None) -> dict:
         elif ref_beats.exists():
             r["beat_level"] = evaluate.beat_metrics(str(ref_beats), ana)
         else:
-            r["meta_level"] = evaluate.meta_metrics(sid, ana)
+            r["meta_level"] = evaluate.meta_metrics(sid, ana, str(meta_json) if meta_json.exists() else None)
         for k in ("beat_times", "bar_times"):      # 太长，不进 results.json
             r.pop(k, None)
         res[src] = r
@@ -115,17 +120,27 @@ def fmt_row(r: dict, src: str) -> str:
                 f"{m['est_ts']}{' ✓' if m['meter_ok'] else ' ✗(' + m['ref_ts'] + ')'} | "
                 f"节拍F {m['beat_F']} | 小节线F {m['bar_F']} | — | — | — |")
     m = s.get("meta_level", {})
-    return (f"| {r['song']} | {nl.get('F1', '')} | {'✓' if m.get('key_ok') else '✗'} | "
-            f"{m.get('est_ts', '')}{'' if m.get('meter_ok') else ' ✗(' + m.get('ref_ts', '') + ')'} | — | — | — | — | — |")
+    kok = m.get("key_ok")
+    kmark = '—' if kok is None else ('✓' if kok else '✗')
+    mok = m.get("meter_ok")
+    ts_str = m.get("est_ts", "")
+    if mok is False:
+        ts_str += f" ✗({m.get('ref_ts', '')})"
+    return (f"| {r['song']} | {nl.get('F1', '—')} | {kmark} | "
+            f"{ts_str} | — | — | — | — | — |")
 
 
 def fmt_read_row(r: dict) -> str:
     ar = r.get("audio", {}).get("readability", {})
-    rr = r.get("ref_readability") or r.get("oracle", {}).get("readability", {})
-    ref_kind = "标准谱" if "ref_readability" in r else "Oracle"
+    rr = r.get("ref_readability") or r.get("oracle", {}).get("readability")
+    if rr:
+        ref_kind = "标准谱" if "ref_readability" in r else "Oracle"
+        ref_str = f"{ref_kind}: {rr.get('rests_per_bar', '')} / {rr.get('tuplet_ratio', '')} / {rr.get('short16_ratio', '')}"
+    else:
+        ref_str = "—"
     return (f"| {r['song']} | {ar.get('rests_per_bar', '')} | {ar.get('tuplet_ratio', '')} | "
             f"{ar.get('short16_ratio', '')} | {'✓' if ar.get('has_pickup') else '—'} | "
-            f"{ref_kind}: {rr.get('rests_per_bar', '')} / {rr.get('tuplet_ratio', '')} / {rr.get('short16_ratio', '')} |")
+            f"{ref_str} |")
 
 
 def write_report(results: list, out: Path):

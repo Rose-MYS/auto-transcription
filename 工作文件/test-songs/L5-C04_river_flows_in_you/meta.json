@@ -1,0 +1,18 @@
+{
+  "id": "L5-C04",
+  "category": "C_Rose_PopCover",
+  "title": "River Flows in You (含混合拍子)",
+  "composer": "Yiruma",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV1iK411J7M6",
+  "license": "个人学习测试（有版权，音频不进 git）",
+  "ref_key_sharps": 3,
+  "ref_key_name": "A major",
+  "ref_ts": "4/4",
+  "pickup": false,
+  "rubato": true,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 0.0,
+  "clip_end": 75.0,
+  "maestro_overlap": false
+}

@@ -146,19 +146,30 @@ def beat_metrics(beats_json: str, ana) -> dict:
     return out
 
 
-def meta_metrics(song_id: str, ana) -> dict:
-    meta = META.get(song_id[:5])
+def meta_metrics(song_id: str, ana, meta_json: str | None = None) -> dict:
+    meta = None
+    if meta_json and Path(meta_json).exists():
+        import json
+        d = json.loads(Path(meta_json).read_text(encoding="utf-8"))
+        meta = {"key_sharps": d.get("ref_key_sharps"), "ts": d.get("ref_ts")}
+    if meta is None:
+        meta = META.get(song_id[:5])
     if not meta:
         return {}
-    num = int(meta["ts"].split("/")[0])
-    # 3/8 → 3 拍，12/8 → 4 个附点四分拍，2/4 ↔ 4/4 视为同类
-    accept = {num, {12: 4, 6: 2, 9: 3}.get(num, num)}
-    if num in (2, 4):
-        accept |= {2, 4}
     est_ts = getattr(ana, "time_sig", f"{ana.beats_per_bar}/4")
-    return {"key_ok": _key_sharps_ok(ana.key_sharps, meta["key_sharps"]), "ref_key_sharps": meta["key_sharps"],
-            "est_key_sharps": ana.key_sharps, "ref_ts": meta["ts"], "est_ts": est_ts,
-            "meter_ok": (est_ts == meta["ts"]) or (ana.beats_per_bar in accept)}
+    ref_ks = meta.get("key_sharps")
+    ref_ts = meta.get("ts")
+    key_ok = _key_sharps_ok(ana.key_sharps, ref_ks) if isinstance(ref_ks, int) else None
+    meter_ok = None
+    if ref_ts and ref_ts != "unknown":
+        num = int(ref_ts.split("/")[0])
+        accept = {num, {12: 4, 6: 2, 9: 3}.get(num, num)}
+        if num in (2, 4):
+            accept |= {2, 4}
+        meter_ok = (est_ts == ref_ts) or (ana.beats_per_bar in accept)
+    return {"key_ok": key_ok, "ref_key_sharps": ref_ks,
+            "est_key_sharps": ana.key_sharps, "ref_ts": ref_ts, "est_ts": est_ts,
+            "meter_ok": meter_ok}
 
 
 def readability_metrics(sc) -> dict:

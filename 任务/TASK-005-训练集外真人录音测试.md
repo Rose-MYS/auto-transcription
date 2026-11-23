@@ -75,7 +75,7 @@ Rose 会把自己的音频放进 `工作文件\test-songs\L5-rose\`（每首一�
 
 ## 领取记录
 
-（agent 名 / 日期）
+Antigravity / 2026-11-23
 
 ## 完成记录
 

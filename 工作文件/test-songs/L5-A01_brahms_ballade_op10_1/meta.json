@@ -1,0 +1,18 @@
+{
+  "id": "L5-A01",
+  "category": "A_SMD_Disklavier",
+  "title": "Ballade Op. 10 No. 1 (Edward)",
+  "composer": "Johannes Brahms",
+  "performer": "SMD Performer 003",
+  "source_url": "https://zenodo.org/records/10847280",
+  "license": "CC BY-NC-SA 3.0",
+  "ref_key_sharps": -1,
+  "ref_key_name": "D minor",
+  "ref_ts": "4/4",
+  "pickup": true,
+  "rubato": true,
+  "audio_quality": "studio",
+  "clip_start": 0.0,
+  "clip_end": 75.0,
+  "maestro_overlap": false
+}

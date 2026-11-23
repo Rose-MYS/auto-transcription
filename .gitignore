@@ -28,4 +28,7 @@ __pycache__/
 工作文件/test-songs/L5-rose/**/*.jpg
 
 工作文件/l5-review/l5_sheet_*.png
+工作文件/test-songs/L5-C*/audio.*
+最终成品/v4-test-*/*_原声.*
+最终成品/v4-test-*/*_回放.*
 

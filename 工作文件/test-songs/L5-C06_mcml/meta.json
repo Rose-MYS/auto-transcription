@@ -1,0 +1,18 @@
+{
+  "id": "L5-C06",
+  "category": "C_Rose_PopCover",
+  "title": "Merry Christmas Mr. Lawrence",
+  "composer": "坂本龙一",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV1Qv4y1974e",
+  "license": "个人学习测试（有版权，音频不进 git）",
+  "ref_key_sharps": -5,
+  "ref_key_name": "Db major",
+  "ref_ts": "12/8",
+  "pickup": false,
+  "rubato": true,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 10.0,
+  "clip_end": 85.0,
+  "maestro_overlap": false
+}

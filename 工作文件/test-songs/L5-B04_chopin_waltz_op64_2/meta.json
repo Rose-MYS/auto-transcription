@@ -1,0 +1,19 @@
+{
+  "id": "L5-B04",
+  "category": "B_PublicDomain_Classical",
+  "title": "Waltz in C# minor, Op. 64 No. 2",
+  "composer": "Frédéric Chopin",
+  "performer": "José Iturbi",
+  "source_url": "https://archive.org/details/78_waltz-in-c-sharp-minor-op-64-no-2_jose-iturbi-chopin_gbia0124709a",
+  "download_url": "https://archive.org/download/78_waltz-in-c-sharp-minor-op-64-no-2_jose-iturbi-chopin_gbia0124709a/WALTZ%20IN%20C%20SHARP%20MINOR,%20OP.%2064.%20NO.%202%20-%20JOSE%20ITURBI.flac",
+  "license": "Public Domain (78rpm)",
+  "ref_key_sharps": 4,
+  "ref_key_name": "C# minor",
+  "ref_ts": "3/4",
+  "pickup": false,
+  "rubato": true,
+  "audio_quality": "historical_noisy",
+  "clip_start": 0.0,
+  "clip_end": 75.0,
+  "maestro_overlap": false
+}

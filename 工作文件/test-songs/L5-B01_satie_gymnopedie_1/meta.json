@@ -1,0 +1,19 @@
+{
+  "id": "L5-B01",
+  "category": "B_PublicDomain_Classical",
+  "title": "Gymnopédie No. 1",
+  "composer": "Erik Satie",
+  "performer": "Archive.org",
+  "source_url": "https://archive.org/details/SatieGymnopedieNo.1.",
+  "download_url": "https://archive.org/download/SatieGymnopedieNo.1./Satie-Gymnopedie%20No.%201..flac",
+  "license": "Public Domain / Archive.org",
+  "ref_key_sharps": 2,
+  "ref_key_name": "D major",
+  "ref_ts": "3/4",
+  "pickup": false,
+  "rubato": true,
+  "audio_quality": "studio",
+  "clip_start": 0.0,
+  "clip_end": 75.0,
+  "maestro_overlap": false
+}

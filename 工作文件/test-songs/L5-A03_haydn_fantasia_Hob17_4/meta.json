@@ -1,0 +1,18 @@
+{
+  "id": "L5-A03",
+  "category": "A_SMD_Disklavier",
+  "title": "Fantasia in C major, Hob. XVII:4",
+  "composer": "Joseph Haydn",
+  "performer": "SMD Performer 003",
+  "source_url": "https://zenodo.org/records/10847280",
+  "license": "CC BY-NC-SA 3.0",
+  "ref_key_sharps": 0,
+  "ref_key_name": "C major",
+  "ref_ts": "3/8",
+  "pickup": true,
+  "rubato": true,
+  "audio_quality": "studio",
+  "clip_start": 0.0,
+  "clip_end": 75.0,
+  "maestro_overlap": false
+}
