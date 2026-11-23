@@ -16,19 +16,9 @@ desktop.ini
 *.key
 .env
 
-# 大于 20MB 的文件（按约定不进 git）
 
 
 __pycache__/
 *.pyc
 
-# 有版权的测试音频/乐谱，只供个人测试，不进 git
-工作文件/test-songs/L5-rose/**/*.m4a
-工作文件/test-songs/L5-rose/**/*.pdf
-工作文件/test-songs/L5-rose/**/*.jpg
-
-工作文件/l5-review/l5_sheet_*.png
-工作文件/test-songs/L5-C*/audio.*
-最终成品/v4-test-*/*_原声.*
-最终成品/v4-test-*/*_回放.*
-
+# 2026-11-23 Rose: all audio and scores are committed to git (no exclusions, no 20MB limit)

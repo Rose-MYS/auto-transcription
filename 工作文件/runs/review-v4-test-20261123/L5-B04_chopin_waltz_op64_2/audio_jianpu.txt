@@ -1,0 +1,25 @@
+title=L5-B04_chopin_waltz_op64_2
+1=E
+2/4
+
+3' q1'. s1 | q7 q6, q6,. s3 | 5 q3 7 | q3 q5. s3 |
+6 ~ s6 6 - ~ q6 ~ s6 |  | #5 - ~ s#5 | q3 q5 s3 s1 s4 |
+s4 s7, 2 q3 | q1 q3 s3 s4 s4 s#4 | q6 q2 5 | q3 q5 q#5 q6 |
+s6 s#6 s#6 s7 s7 q3' s3' | s#2' s#2' s2' s#1' s#1' s1' s1' s7 | q#6 s#6 s6 q6 q#5 | s#5 q5 q5. 4 |
+1'. | 1 1 | 7 - | 6, 6, - ~ q6, |
+s3 s5 | 4 q3 q7. | s3 s5 s4 7, | 6 s6 1 - ~ q1 ~ s1 |
+ | q#5 4, q4, | 0 1 | s3 #6, ~ s#6, q1 |
+5 s1 q3 s1 | 4 4 - | 3 | q#1 s#4 s6, s#4 s5 s5 s#5 |
+q7. q2. q6. | q7, 2 ~ s2 | q2 q3 q3 q4. | q6. 5,. |
+5 ~ q5 ~ s5 | q6, q4 s4, s3 s2 | 3 q1 q2 | #2 3 |
+6, 1. | 1. | 7, 6,. | q1 3 ~ s3 |
+q3' s4' q3' q2' | q7 q3 q2' q3' | s2' q1' q6. q3 | q1' q2' q1' q7 |
+s#5 s2 q7 s1' s7 s6 q4 | s1 q6 s7 s6 q4 | s6 s7 s6 s3 s3 s7, s4 s3 | s#5 s6 s1' s2' s3' s4' s3' s2' |
+s7 s3 s2' s3' s2' s1' s6 s3 | s1' s2' s1' s7 s#5 s2 s7 s1' | s7 s6 s4 s1 s4 s5 s6 s#6 | s1' s2' s#2' s3' s4' s5' s6' s#6' |
+s7' s1'' s#1'' q2'' s#2'' q3'' | 6'' - ~ 6'' ~ q6'' | s3' s4' | s3' s2' q7 s2' s3' s2' s1' |
+s6 s3 s1' s2' s1' s7 s#5 s2 | s7 s1' s7 s6 s4 s1 s6 s7 | s6 q4. s6 s6 q7 | q6 q3. q3 3 ~ s3 |
+q7, q3 | s4 s3 s#2 s3 s#5 s6 s1' s2' | q3' q4' q3' s2' s7 q3 | s2' s3' q2' s1' q6 s3 |
+s1' s2' s1' s7 s#5 s2 s7 s1' | s7 s6 s4 s1 s4 s5 s6 s#6 | q1' s2' s#2' q3' s4' q5' | s6' q#6' q7' q1'' |
+s#1'' q2'' q#2''. q3'' | 6'' - - - |  | 0 #1' |
+3 q#1' q3 | q7. q6 q#5. | #1 2 | q0 2 q2' |
+2 q2 #1' ~ s#1' | s7 2 | q2 q6 0 - - |  |
