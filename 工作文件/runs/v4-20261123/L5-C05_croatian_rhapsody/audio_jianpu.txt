@@ -1,0 +1,11 @@
+title=L5-C05_croatian_rhapsody
+1=Eb
+4/4
+
+3 s3'' s6' s3'' s6' s6' s4' q2' s6' s4' q2' | s7' sb6' q3' q7' s3' s1' q6 s3' s1' 6 | s3'' s1'' q6' s3'' s1'' s3'' s6' s6' s4' q2' s6' s4' s6' s2' | s7' sb6' q3' q7' s3' s1' q6 s3' s1' 6 |
+s3' s1' 6 s3' s6 s3' s1' 6 s3' s6 | s3' s1' q6 q3' s3' q3'. s3' s1' 6 | s3' s1' 6 s3' s6 s3' s1' 6 s3' s6 | s3' s1' q6 q3' s3' q3'. s3' s1' 6 |
+s3' s1' q6 q6 s3' s6 s1' s4 q2 7 | s2' sb6 q3 1' q3' 3. | s3' s1' q6 q3' s6 s3 s3' s4 q2 2' | s2' sb6 q3 q7 s3 s1 q6 s3 s1 6, |
+s3 s1 q6, s6, s3, s3 s6, s3 s1 6, s3 s6, | s3 s1 q6, q3 s3 q3. s3 s1 6, | s3 s1 q6, s6, s3, s3 s6, s3 s1 6, s3 s6, | s3 s1 q6, q3 s3 q3. s3 s1 6, |
+s1' s3 s6 s7 s1' s3 s6 s1' s2' s3 s1' s3 s7 s3 s6 s3 | s7 s3 sb6 s6 s7 s3 sb6 s7 s1' s3 s7 s3 s6 s3 s3' s3 | s1' s3 s6 s7 s1' s3 s6 s1' s2' s3 s1' s3 s7 s3 s6 s3 | s3' s3 sb6 s3 s1' s3 s7 s3 s6 s3 s3' s3 6 |
+s1'' s3' s6' s7' s1'' s3' s6' s1'' s2'' s3' s1'' s3' s7' s3' s6' s3' | s7' s3' sb6' s6' s7' s3' sb6' s7' s1'' s3' s7' s3' s6' s3' s3'' s3' | s1'' s3' s6' s7' s1'' s3' s6' s1'' s2'' s3' s1'' s3' s7' s3' s6' s3' | s3'' s3' sb6' s3' s1'' s3' s7' s3' s6' s3' s3'' s3' 6' |
+s3' s6 s1' s2' s3' s6 s1' s5' s4' s6 s3' s6 s2' s6 s1' s6 | s2' s5 s7 s1' s2' s5 s7 s4' s3' s5 s2' s5 s1' s5 s7 s5 | s1' s4 s6 s7 s1' s4 s6 s3' s2' s4 s1' s4 s7 s4 s6 s4 | q7 q3 q1' q7 q6 q3' 6' |
