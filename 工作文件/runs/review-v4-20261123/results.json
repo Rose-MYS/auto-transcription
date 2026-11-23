@@ -1,0 +1,3472 @@
+[
+ {
+  "song": "L1-01_twinkle_flute",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 0.188,
+   "R": 0.214,
+   "F1": 0.2,
+   "F1_with_offset": 0.067,
+   "n_ref": 42,
+   "n_est": 48
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.0
+  },
+  "ref_readability": {
+   "n_bars": 12,
+   "n_rests": 0,
+   "n_notes": 42,
+   "rests_per_bar": 0.0,
+   "tuplet_ratio": 0.0,
+   "short16_ratio": 0.0,
+   "has_pickup": false
+  },
+  "audio": {
+   "bpm": 89.6,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": false,
+   "seconds": 4.3,
+   "meter_scores": {
+    "2/0": 1.596,
+    "2/1": -1.446,
+    "3/0": 0.21,
+    "3/1": 0.025,
+    "3/2": -0.085,
+    "4/0": 1.165,
+    "4/1": -0.993,
+    "4/2": 0.889,
+    "4/3": -0.958
+   },
+   "n_notes": 48,
+   "n_beats": 53,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": false,
+    "med_r": 0.0371,
+    "p75_r": 0.0618,
+    "drift": 0.0646,
+    "mono": true,
+    "n_notes": 48,
+    "vel_std": 5.41,
+    "vel_iqr": 2.0
+   },
+   "readability": {
+    "n_bars": 13,
+    "n_rests": 1,
+    "n_notes": 48,
+    "rests_per_bar": 0.08,
+    "tuplet_ratio": 0.208,
+    "short16_ratio": 0.104,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.6,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.37,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  },
+  "oracle": {
+   "bpm": 90.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.5,
+   "meter_scores": {
+    "2/0": 1.722,
+    "2/1": -1.572,
+    "3/0": 0.004,
+    "3/1": 0.075,
+    "3/2": 0.075,
+    "4/0": 1.335,
+    "4/1": -0.957,
+    "4/2": 0.886,
+    "4/3": -1.17
+   },
+   "n_notes": 42,
+   "n_beats": 49,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0009,
+    "p75_r": 0.001,
+    "drift": 0.0004,
+    "mono": true,
+    "n_notes": 42,
+    "vel_std": 0.0,
+    "vel_iqr": 0.0
+   },
+   "readability": {
+    "n_bars": 12,
+    "n_rests": 0,
+    "n_notes": 42,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  }
+ },
+ {
+  "song": "L1-02_ode_to_joy_violin",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 0.667,
+   "R": 0.667,
+   "F1": 0.667,
+   "F1_with_offset": 0.667,
+   "n_ref": 30,
+   "n_est": 30
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 1.0
+  },
+  "ref_readability": {
+   "n_bars": 8,
+   "n_rests": 0,
+   "n_notes": 30,
+   "rests_per_bar": 0.0,
+   "tuplet_ratio": 0.0,
+   "short16_ratio": 0.0,
+   "has_pickup": false
+  },
+  "audio": {
+   "bpm": 100.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": false,
+   "seconds": 0.3,
+   "meter_scores": {
+    "2/0": 0.493,
+    "2/1": -0.343,
+    "3/0": 0.116,
+    "3/1": 0.101,
+    "3/2": -0.067,
+    "4/0": 0.255,
+    "4/1": -0.631,
+    "4/2": 0.344,
+    "4/3": 0.196
+   },
+   "n_notes": 30,
+   "n_beats": 37,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": false,
+    "med_r": 0.0494,
+    "p75_r": 0.0865,
+    "drift": 0.0242,
+    "mono": true,
+    "n_notes": 30,
+    "vel_std": 5.74,
+    "vel_iqr": 5.75
+   },
+   "readability": {
+    "n_bars": 9,
+    "n_rests": 1,
+    "n_notes": 30,
+    "rests_per_bar": 0.11,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.067,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.933,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.893,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  },
+  "oracle": {
+   "bpm": 100.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.3,
+   "meter_scores": {
+    "2/0": 0.499,
+    "2/1": -0.349,
+    "3/0": 0.129,
+    "3/1": 0.093,
+    "3/2": -0.072,
+    "4/0": 0.26,
+    "4/1": -0.634,
+    "4/2": 0.348,
+    "4/3": 0.19
+   },
+   "n_notes": 30,
+   "n_beats": 34,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0008,
+    "p75_r": 0.0013,
+    "drift": 0.0019,
+    "mono": true,
+    "n_notes": 30,
+    "vel_std": 0.0,
+    "vel_iqr": 0.0
+   },
+   "readability": {
+    "n_bars": 8,
+    "n_rests": 0,
+    "n_notes": 30,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  }
+ },
+ {
+  "song": "L1-03_twinkle_piano_melody",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.952,
+   "n_ref": 42,
+   "n_est": 42
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.8
+  },
+  "ref_readability": {
+   "n_bars": 12,
+   "n_rests": 0,
+   "n_notes": 42,
+   "rests_per_bar": 0.0,
+   "tuplet_ratio": 0.0,
+   "short16_ratio": 0.0,
+   "has_pickup": false
+  },
+  "audio": {
+   "bpm": 90.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.4,
+   "meter_scores": {
+    "2/0": 1.722,
+    "2/1": -1.572,
+    "3/0": 0.004,
+    "3/1": 0.075,
+    "3/2": 0.075,
+    "4/0": 1.333,
+    "4/1": -0.958,
+    "4/2": 0.888,
+    "4/3": -1.17
+   },
+   "n_notes": 42,
+   "n_beats": 50,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0016,
+    "p75_r": 0.0026,
+    "drift": 0.0011,
+    "mono": true,
+    "n_notes": 42,
+    "vel_std": 3.34,
+    "vel_iqr": 6.0
+   },
+   "readability": {
+    "n_bars": 12,
+    "n_rests": 0,
+    "n_notes": 42,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  },
+  "oracle": {
+   "bpm": 90.0,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 0.4,
+   "meter_scores": {
+    "2/0": 1.722,
+    "2/1": -1.572,
+    "3/0": 0.004,
+    "3/1": 0.075,
+    "3/2": 0.075,
+    "4/0": 1.335,
+    "4/1": -0.957,
+    "4/2": 0.886,
+    "4/3": -1.17
+   },
+   "n_notes": 42,
+   "n_beats": 49,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0009,
+    "p75_r": 0.001,
+    "drift": 0.0004,
+    "mono": true,
+    "n_notes": 42,
+    "vel_std": 0.0,
+    "vel_iqr": 0.0
+   },
+   "readability": {
+    "n_bars": 12,
+    "n_rests": 0,
+    "n_notes": 42,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "1/1"
+   }
+  }
+ },
+ {
+  "song": "L2-01_twinkle_two_hands",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.965,
+   "n_ref": 114,
+   "n_est": 114
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 3.2
+  },
+  "ref_readability": {
+   "n_bars": 12,
+   "n_rests": 0,
+   "n_notes": 66,
+   "rests_per_bar": 0.0,
+   "tuplet_ratio": 0.0,
+   "short16_ratio": 0.0,
+   "has_pickup": false
+  },
+  "audio": {
+   "bpm": 90.1,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.8,
+   "meter_scores": {
+    "2/0": 1.514,
+    "2/1": -1.364,
+    "3/0": 0.029,
+    "3/1": 0.024,
+    "3/2": 0.101,
+    "4/0": 1.153,
+    "4/1": -0.665,
+    "4/2": 0.793,
+    "4/3": -1.19
+   },
+   "n_notes": 114,
+   "n_beats": 51,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0225,
+    "p75_r": 0.0311,
+    "drift": 0.06,
+    "mono": false,
+    "n_notes": 114,
+    "vel_std": 2.22,
+    "vel_iqr": 4.0
+   },
+   "readability": {
+    "n_bars": 12,
+    "n_rests": 0,
+    "n_notes": 66,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.965,
+    "hand_acc": 0.965,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 90.1,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.6,
+   "meter_scores": {
+    "2/0": 1.514,
+    "2/1": -1.364,
+    "3/0": 0.029,
+    "3/1": 0.024,
+    "3/2": 0.101,
+    "4/0": 1.154,
+    "4/1": -0.665,
+    "4/2": 0.793,
+    "4/3": -1.19
+   },
+   "n_notes": 114,
+   "n_beats": 51,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.019,
+    "p75_r": 0.0296,
+    "drift": 0.0577,
+    "mono": false,
+    "n_notes": 114,
+    "vel_std": 0.0,
+    "vel_iqr": 0.0
+   },
+   "readability": {
+    "n_bars": 12,
+    "n_rests": 0,
+    "n_notes": 66,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.965,
+    "hand_acc": 0.965,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L2-02_ode_to_joy_two_hands",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.978,
+   "F1": 0.989,
+   "F1_with_offset": 0.901,
+   "n_ref": 46,
+   "n_est": 45
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 1.1
+  },
+  "ref_readability": {
+   "n_bars": 8,
+   "n_rests": 0,
+   "n_notes": 46,
+   "rests_per_bar": 0.0,
+   "tuplet_ratio": 0.0,
+   "short16_ratio": 0.0,
+   "has_pickup": false
+  },
+  "audio": {
+   "bpm": 100.2,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.4,
+   "meter_scores": {
+    "2/0": 1.135,
+    "2/1": -0.985,
+    "3/0": 0.048,
+    "3/1": 0.139,
+    "3/2": -0.037,
+    "4/0": 0.868,
+    "4/1": -0.735,
+    "4/2": 0.573,
+    "4/3": -0.597
+   },
+   "n_notes": 45,
+   "n_beats": 35,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0194,
+    "p75_r": 0.031,
+    "drift": 0.0531,
+    "mono": false,
+    "n_notes": 45,
+    "vel_std": 2.28,
+    "vel_iqr": 4.0
+   },
+   "readability": {
+    "n_bars": 8,
+    "n_rests": 1,
+    "n_notes": 45,
+    "rests_per_bar": 0.12,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.989,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 100.2,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.3,
+   "meter_scores": {
+    "2/0": 1.141,
+    "2/1": -0.991,
+    "3/0": 0.036,
+    "3/1": 0.129,
+    "3/2": -0.016,
+    "4/0": 0.884,
+    "4/1": -0.739,
+    "4/2": 0.565,
+    "4/3": -0.602
+   },
+   "n_notes": 46,
+   "n_beats": 35,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0183,
+    "p75_r": 0.0273,
+    "drift": 0.0516,
+    "mono": false,
+    "n_notes": 46,
+    "vel_std": 0.0,
+    "vel_iqr": 0.0
+   },
+   "readability": {
+    "n_bars": 8,
+    "n_rests": 0,
+    "n_notes": 46,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 1.0,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 1.0,
+    "hand_acc": 1.0,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L2-03_bach_chorale_bwv66_6_piano",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.945,
+   "F1": 0.972,
+   "F1_with_offset": 0.858,
+   "n_ref": 163,
+   "n_est": 154
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 0.9
+  },
+  "ref_readability": {
+   "n_bars": 10,
+   "n_rests": 4,
+   "n_notes": 165,
+   "rests_per_bar": 0.4,
+   "tuplet_ratio": 0.0,
+   "short16_ratio": 0.0,
+   "has_pickup": true
+  },
+  "audio": {
+   "bpm": 96.0,
+   "meter": "4/4",
+   "key": "F# minor",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.7,
+   "meter_scores": {
+    "2/0": -0.261,
+    "2/1": 0.411,
+    "3/0": -0.048,
+    "3/1": -0.106,
+    "3/2": 0.315,
+    "4/0": -0.294,
+    "4/1": 0.309,
+    "4/2": -0.104,
+    "4/3": 0.239
+   },
+   "n_notes": 154,
+   "n_beats": 37,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0029,
+    "p75_r": 0.0045,
+    "drift": 0.0048,
+    "mono": false,
+    "n_notes": 154,
+    "vel_std": 3.79,
+    "vel_iqr": 3.0
+   },
+   "readability": {
+    "n_bars": 10,
+    "n_rests": 6,
+    "n_notes": 87,
+    "rests_per_bar": 0.6,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.034,
+    "has_pickup": true
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.972,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.838,
+    "hand_acc": 0.812,
+    "staves_ref_est": "2/2"
+   }
+  },
+  "oracle": {
+   "bpm": 96.0,
+   "meter": "4/4",
+   "key": "F# minor",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 0.7,
+   "meter_scores": {
+    "2/0": -0.26,
+    "2/1": 0.41,
+    "3/0": -0.048,
+    "3/1": -0.104,
+    "3/2": 0.313,
+    "4/0": -0.294,
+    "4/1": 0.309,
+    "4/2": -0.103,
+    "4/3": 0.237
+   },
+   "n_notes": 154,
+   "n_beats": 37,
+   "beat_source": "notes",
+   "meter_source": "notes",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "beat_auto_info": {
+    "mechanical": true,
+    "beat_regular": true,
+    "med_r": 0.0008,
+    "p75_r": 0.0011,
+    "drift": 0.0009,
+    "mono": false,
+    "n_notes": 163,
+    "vel_std": 0.0,
+    "vel_iqr": 0.0
+   },
+   "readability": {
+    "n_bars": 10,
+    "n_rests": 3,
+    "n_notes": 87,
+    "rests_per_bar": 0.3,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": true
+   },
+   "score_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ts_ok": true,
+    "meter_exact": true,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "score_note_F1": 0.972,
+    "beat_level": "ok",
+    "downbeat_ok": true,
+    "dur_acc": 0.851,
+    "hand_acc": 0.812,
+    "staves_ref_est": "2/2"
+   }
+  }
+ },
+ {
+  "song": "L3-01_bach_prelude_C_BWV846",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.993,
+   "F1": 0.996,
+   "F1_with_offset": 0.93,
+   "n_ref": 1925,
+   "n_est": 1911
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 9.6
+  },
+  "audio": {
+   "bpm": 115.4,
+   "meter": "2/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 7.5,
+   "meter_scores": {
+    "2/0": -0.385,
+    "2/1": 0.535,
+    "3/0": -0.017,
+    "3/1": 0.24,
+    "3/2": -0.073,
+    "4/0": -0.337,
+    "4/1": 0.455,
+    "4/2": -0.176,
+    "4/3": 0.208
+   },
+   "n_notes": 1908,
+   "n_beats": 428,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.074,
+   "downbeat_purity": 0.873,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0433,
+    "p75_r": 0.0732,
+    "drift": 0.088,
+    "mono": true,
+    "n_notes": 1911,
+    "vel_std": 12.56,
+    "vel_iqr": 17.0
+   },
+   "readability": {
+    "n_bars": 213,
+    "n_rests": 13,
+    "n_notes": 1684,
+    "rests_per_bar": 0.06,
+    "tuplet_ratio": 0.003,
+    "short16_ratio": 0.472,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "4/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": false
+   }
+  },
+  "oracle": {
+   "bpm": 115.4,
+   "meter": "2/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 8.6,
+   "meter_scores": {
+    "2/0": -0.357,
+    "2/1": 0.507,
+    "3/0": -0.013,
+    "3/1": 0.224,
+    "3/2": -0.061,
+    "4/0": -0.312,
+    "4/1": 0.42,
+    "4/2": -0.164,
+    "4/3": 0.206
+   },
+   "n_notes": 1922,
+   "n_beats": 428,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.051,
+   "downbeat_purity": 0.873,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0427,
+    "p75_r": 0.0745,
+    "drift": 0.0596,
+    "mono": true,
+    "n_notes": 1925,
+    "vel_std": 12.83,
+    "vel_iqr": 17.0
+   },
+   "readability": {
+    "n_bars": 213,
+    "n_rests": 15,
+    "n_notes": 1688,
+    "rests_per_bar": 0.07,
+    "tuplet_ratio": 0.003,
+    "short16_ratio": 0.473,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "4/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": false
+   }
+  }
+ },
+ {
+  "song": "L3-02_grieg_waltz_op38_7",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.993,
+   "F1": 0.996,
+   "F1_with_offset": 0.783,
+   "n_ref": 405,
+   "n_est": 402
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 4.6
+  },
+  "audio": {
+   "bpm": 145.2,
+   "meter": "3/4",
+   "key": "E minor",
+   "key_sharps": 1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.1,
+   "meter_scores": {
+    "2/0": -0.135,
+    "2/1": 0.285,
+    "3/0": -0.566,
+    "3/1": 0.999,
+    "3/2": -0.278,
+    "4/0": -0.044,
+    "4/1": 0.116,
+    "4/2": -0.136,
+    "4/3": 0.215
+   },
+   "n_notes": 402,
+   "n_beats": 179,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.506,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0401,
+    "p75_r": 0.0738,
+    "drift": 0.1046,
+    "mono": true,
+    "n_notes": 402,
+    "vel_std": 13.76,
+    "vel_iqr": 21.0
+   },
+   "readability": {
+    "n_bars": 59,
+    "n_rests": 20,
+    "n_notes": 324,
+    "rests_per_bar": 0.34,
+    "tuplet_ratio": 0.019,
+    "short16_ratio": 0.136,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 1,
+    "est_key_sharps": 1,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 145.2,
+   "meter": "3/4",
+   "key": "E minor",
+   "key_sharps": 1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 1.7,
+   "meter_scores": {
+    "2/0": -0.103,
+    "2/1": 0.253,
+    "3/0": -0.584,
+    "3/1": 1.011,
+    "3/2": -0.272,
+    "4/0": -0.043,
+    "4/1": 0.124,
+    "4/2": -0.095,
+    "4/3": 0.164
+   },
+   "n_notes": 405,
+   "n_beats": 179,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.508,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0424,
+    "p75_r": 0.0767,
+    "drift": 0.1219,
+    "mono": false,
+    "n_notes": 405,
+    "vel_std": 13.54,
+    "vel_iqr": 19.0
+   },
+   "readability": {
+    "n_bars": 59,
+    "n_rests": 21,
+    "n_notes": 326,
+    "rests_per_bar": 0.36,
+    "tuplet_ratio": 0.018,
+    "short16_ratio": 0.132,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 1,
+    "est_key_sharps": 1,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L3-03_scarlatti_sonata_K525",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.976,
+   "F1": 0.988,
+   "F1_with_offset": 0.939,
+   "n_ref": 882,
+   "n_est": 861
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.9
+  },
+  "audio": {
+   "bpm": 69.8,
+   "meter": "3/8",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.7,
+   "meter_scores": {
+    "2/0": 0.419,
+    "2/1": -0.269,
+    "3/0": 0.05,
+    "3/1": 0.258,
+    "3/2": -0.158,
+    "4/0": 0.189,
+    "4/1": -0.419,
+    "4/2": 0.368,
+    "4/3": 0.005
+   },
+   "n_notes": 857,
+   "n_beats": 74,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.397,
+   "downbeat_purity": 0.959,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0437,
+    "p75_r": 0.0744,
+    "drift": 0.1305,
+    "mono": false,
+    "n_notes": 861,
+    "vel_std": 11.15,
+    "vel_iqr": 14.0
+   },
+   "readability": {
+    "n_bars": 74,
+    "n_rests": 3,
+    "n_notes": 621,
+    "rests_per_bar": 0.04,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.762,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "3/8",
+    "est_ts": "3/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 69.8,
+   "meter": "3/8",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.2,
+   "meter_scores": {
+    "2/0": 0.426,
+    "2/1": -0.276,
+    "3/0": 0.033,
+    "3/1": 0.259,
+    "3/2": -0.142,
+    "4/0": 0.209,
+    "4/1": -0.434,
+    "4/2": 0.357,
+    "4/3": 0.011
+   },
+   "n_notes": 878,
+   "n_beats": 73,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.396,
+   "downbeat_purity": 0.959,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0436,
+    "p75_r": 0.0734,
+    "drift": 0.1426,
+    "mono": false,
+    "n_notes": 882,
+    "vel_std": 12.26,
+    "vel_iqr": 14.75
+   },
+   "readability": {
+    "n_bars": 74,
+    "n_rests": 3,
+    "n_notes": 633,
+    "rests_per_bar": 0.04,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.763,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "3/8",
+    "est_ts": "3/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L3-04_schubert_moment_musical_op94_3",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.972,
+   "F1": 0.986,
+   "F1_with_offset": 0.845,
+   "n_ref": 1034,
+   "n_est": 1005
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 4.1
+  },
+  "audio": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.6,
+   "meter_scores": {
+    "2/0": 1.002,
+    "2/1": -0.852,
+    "3/0": 0.211,
+    "3/1": 0.014,
+    "3/2": -0.076,
+    "4/0": 0.686,
+    "4/1": -0.42,
+    "4/2": 0.595,
+    "4/3": -0.723
+   },
+   "n_notes": 1004,
+   "n_beats": 159,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.958,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0401,
+    "p75_r": 0.069,
+    "drift": 0.3146,
+    "mono": false,
+    "n_notes": 1005,
+    "vel_std": 15.97,
+    "vel_iqr": 26.0
+   },
+   "readability": {
+    "n_bars": 79,
+    "n_rests": 1,
+    "n_notes": 657,
+    "rests_per_bar": 0.01,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.253,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -4,
+    "est_key_sharps": -4,
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.7,
+   "meter_scores": {
+    "2/0": 0.991,
+    "2/1": -0.841,
+    "3/0": 0.211,
+    "3/1": 0.012,
+    "3/2": -0.074,
+    "4/0": 0.644,
+    "4/1": -0.41,
+    "4/2": 0.623,
+    "4/3": -0.718
+   },
+   "n_notes": 1033,
+   "n_beats": 159,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.926,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0456,
+    "p75_r": 0.0753,
+    "drift": 0.0915,
+    "mono": false,
+    "n_notes": 1034,
+    "vel_std": 16.54,
+    "vel_iqr": 26.0
+   },
+   "readability": {
+    "n_bars": 79,
+    "n_rests": 1,
+    "n_notes": 662,
+    "rests_per_bar": 0.01,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.27,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -4,
+    "est_key_sharps": -4,
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L3-05_chopin_nocturne_op9_2",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.989,
+   "F1": 0.994,
+   "F1_with_offset": 0.632,
+   "n_ref": 1498,
+   "n_est": 1481
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 14.1
+  },
+  "audio": {
+   "bpm": 44.4,
+   "meter": "12/8",
+   "key": "E- major",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 6.4,
+   "meter_scores": {
+    "2/0": -0.197,
+    "2/1": 0.347,
+    "3/0": 0.077,
+    "3/1": -0.066,
+    "3/2": 0.141,
+    "4/0": -0.128,
+    "4/1": 0.267,
+    "4/2": -0.185,
+    "4/3": 0.196
+   },
+   "n_notes": 1387,
+   "n_beats": 147,
+   "beat_source": "beat_this",
+   "meter_source": "notes",
+   "compound": true,
+   "comp_ratio": 0.506,
+   "downbeat_purity": 0.29,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0414,
+    "p75_r": 0.0728,
+    "drift": 0.1119,
+    "mono": false,
+    "n_notes": 1481,
+    "vel_std": 15.93,
+    "vel_iqr": 24.0
+   },
+   "readability": {
+    "n_bars": 37,
+    "n_rests": 3,
+    "n_notes": 865,
+    "rests_per_bar": 0.08,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.319,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3,
+    "ref_ts": "12/8",
+    "est_ts": "12/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 44.8,
+   "meter": "12/8",
+   "key": "E- major",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 5.4,
+   "meter_scores": {
+    "2/0": -0.187,
+    "2/1": 0.337,
+    "3/0": 0.079,
+    "3/1": -0.078,
+    "3/2": 0.151,
+    "4/0": -0.125,
+    "4/1": 0.246,
+    "4/2": -0.174,
+    "4/3": 0.203
+   },
+   "n_notes": 1399,
+   "n_beats": 145,
+   "beat_source": "beat_this",
+   "meter_source": "notes",
+   "compound": true,
+   "comp_ratio": 0.506,
+   "downbeat_purity": 0.29,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0417,
+    "p75_r": 0.0755,
+    "drift": 0.1265,
+    "mono": false,
+    "n_notes": 1498,
+    "vel_std": 16.37,
+    "vel_iqr": 25.0
+   },
+   "readability": {
+    "n_bars": 37,
+    "n_rests": 4,
+    "n_notes": 869,
+    "rests_per_bar": 0.11,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.319,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3,
+    "ref_ts": "12/8",
+    "est_ts": "12/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L4-01_bach_prelude_C_BWV846",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.739,
+   "n_ref": 379,
+   "n_est": 379
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 6.6
+  },
+  "audio": {
+   "bpm": 63.8,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 1.7,
+   "meter_scores": {
+    "2/0": 1.12,
+    "2/1": -0.97,
+    "3/0": 0.083,
+    "3/1": 0.051,
+    "3/2": 0.017,
+    "4/0": 1.186,
+    "4/1": -0.648,
+    "4/2": 0.249,
+    "4/3": -0.654
+   },
+   "n_notes": 379,
+   "n_beats": 96,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 2.912,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0387,
+    "p75_r": 0.0696,
+    "drift": 0.0408,
+    "mono": true,
+    "n_notes": 379,
+    "vel_std": 10.43,
+    "vel_iqr": 17.0
+   },
+   "readability": {
+    "n_bars": 24,
+    "n_rests": 1,
+    "n_notes": 378,
+    "rests_per_bar": 0.04,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.997,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.989,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0
+   }
+  },
+  "oracle": {
+   "bpm": 63.8,
+   "meter": "4/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": true,
+   "beat_regular": true,
+   "seconds": 1.9,
+   "meter_scores": {
+    "2/0": 1.117,
+    "2/1": -0.967,
+    "3/0": 0.079,
+    "3/1": 0.055,
+    "3/2": 0.018,
+    "4/0": 1.185,
+    "4/1": -0.647,
+    "4/2": 0.245,
+    "4/3": -0.651
+   },
+   "n_notes": 379,
+   "n_beats": 96,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 2.892,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0437,
+    "p75_r": 0.0752,
+    "drift": 0.0248,
+    "mono": true,
+    "n_notes": 379,
+    "vel_std": 10.38,
+    "vel_iqr": 16.5
+   },
+   "readability": {
+    "n_bars": 24,
+    "n_rests": 1,
+    "n_notes": 378,
+    "rests_per_bar": 0.04,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.997,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.989,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0
+   }
+  }
+ },
+ {
+  "song": "L4-02_schubert_moment_musical_3",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.968,
+   "F1": 0.984,
+   "F1_with_offset": 0.838,
+   "n_ref": 914,
+   "n_est": 885
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 6.6
+  },
+  "audio": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.5,
+   "meter_scores": {
+    "2/0": 1.024,
+    "2/1": -0.874,
+    "3/0": 0.214,
+    "3/1": -0.029,
+    "3/2": -0.035,
+    "4/0": 0.74,
+    "4/1": -0.441,
+    "4/2": 0.57,
+    "4/3": -0.733
+   },
+   "n_notes": 884,
+   "n_beats": 137,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.988,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0397,
+    "p75_r": 0.071,
+    "drift": 0.1839,
+    "mono": false,
+    "n_notes": 885,
+    "vel_std": 15.7,
+    "vel_iqr": 26.0
+   },
+   "readability": {
+    "n_bars": 68,
+    "n_rests": 3,
+    "n_notes": 584,
+    "rests_per_bar": 0.04,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.257,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 1.0,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -4,
+    "est_key_sharps": -4
+   }
+  },
+  "oracle": {
+   "bpm": 90.9,
+   "meter": "2/4",
+   "key": "F minor",
+   "key_sharps": -4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.0,
+   "meter_scores": {
+    "2/0": 1.011,
+    "2/1": -0.861,
+    "3/0": 0.213,
+    "3/1": -0.032,
+    "3/2": -0.032,
+    "4/0": 0.692,
+    "4/1": -0.429,
+    "4/2": 0.601,
+    "4/3": -0.727
+   },
+   "n_notes": 913,
+   "n_beats": 136,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.943,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.039,
+    "p75_r": 0.0678,
+    "drift": 0.0879,
+    "mono": false,
+    "n_notes": 914,
+    "vel_std": 16.37,
+    "vel_iqr": 25.0
+   },
+   "readability": {
+    "n_bars": 68,
+    "n_rests": 3,
+    "n_notes": 584,
+    "rests_per_bar": 0.04,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.276,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 1.0,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -4,
+    "est_key_sharps": -4
+   }
+  }
+ },
+ {
+  "song": "L4-03_schubert_impromptu_op90_2",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 0.998,
+   "R": 0.989,
+   "F1": 0.993,
+   "F1_with_offset": 0.916,
+   "n_ref": 1254,
+   "n_est": 1243
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 7.6
+  },
+  "audio": {
+   "bpm": 230.8,
+   "meter": "3/4",
+   "key": "E- major",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 5.0,
+   "meter_scores": {
+    "2/0": 0.266,
+    "2/1": -0.116,
+    "3/0": 0.652,
+    "3/1": 0.176,
+    "3/2": -0.681,
+    "4/0": 0.295,
+    "4/1": 0.154,
+    "4/2": 0.009,
+    "4/3": -0.311
+   },
+   "n_notes": 1243,
+   "n_beats": 348,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.613,
+   "downbeat_purity": 0.877,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0419,
+    "p75_r": 0.0735,
+    "drift": 0.0393,
+    "mono": true,
+    "n_notes": 1243,
+    "vel_std": 8.27,
+    "vel_iqr": 9.0
+   },
+   "readability": {
+    "n_bars": 115,
+    "n_rests": 10,
+    "n_notes": 1021,
+    "rests_per_bar": 0.09,
+    "tuplet_ratio": 0.007,
+    "short16_ratio": 0.324,
+    "has_pickup": true
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.971,
+    "bar_F": 0.987,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3
+   }
+  },
+  "oracle": {
+   "bpm": 230.8,
+   "meter": "3/4",
+   "key": "E- major",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 4.7,
+   "meter_scores": {
+    "2/0": 0.236,
+    "2/1": -0.086,
+    "3/0": 0.645,
+    "3/1": 0.222,
+    "3/2": -0.719,
+    "4/0": 0.273,
+    "4/1": 0.113,
+    "4/2": -0.008,
+    "4/3": -0.229
+   },
+   "n_notes": 1253,
+   "n_beats": 348,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.611,
+   "downbeat_purity": 0.877,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0414,
+    "p75_r": 0.0723,
+    "drift": 0.1147,
+    "mono": true,
+    "n_notes": 1254,
+    "vel_std": 8.96,
+    "vel_iqr": 10.0
+   },
+   "readability": {
+    "n_bars": 115,
+    "n_rests": 70,
+    "n_notes": 1018,
+    "rests_per_bar": 0.61,
+    "tuplet_ratio": 0.012,
+    "short16_ratio": 0.321,
+    "has_pickup": true
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.971,
+    "bar_F": 0.987,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3
+   }
+  }
+ },
+ {
+  "song": "L4-04_mozart_sonata_K332_1",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.996,
+   "F1": 0.998,
+   "F1_with_offset": 0.942,
+   "n_ref": 805,
+   "n_est": 802
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 8.1
+  },
+  "audio": {
+   "bpm": 150.0,
+   "meter": "3/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.2,
+   "meter_scores": {
+    "2/0": 0.032,
+    "2/1": 0.118,
+    "3/0": -0.228,
+    "3/1": 0.881,
+    "3/2": -0.502,
+    "4/0": 0.075,
+    "4/1": 0.132,
+    "4/2": -0.033,
+    "4/3": -0.024
+   },
+   "n_notes": 802,
+   "n_beats": 228,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.876,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0463,
+    "p75_r": 0.0776,
+    "drift": 0.2089,
+    "mono": false,
+    "n_notes": 802,
+    "vel_std": 14.53,
+    "vel_iqr": 22.0
+   },
+   "readability": {
+    "n_bars": 76,
+    "n_rests": 27,
+    "n_notes": 602,
+    "rests_per_bar": 0.36,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.208,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.993,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1
+   }
+  },
+  "oracle": {
+   "bpm": 150.0,
+   "meter": "3/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.6,
+   "meter_scores": {
+    "2/0": 0.034,
+    "2/1": 0.116,
+    "3/0": -0.232,
+    "3/1": 0.882,
+    "3/2": -0.498,
+    "4/0": 0.079,
+    "4/1": 0.138,
+    "4/2": -0.034,
+    "4/3": -0.033
+   },
+   "n_notes": 805,
+   "n_beats": 228,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.865,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0465,
+    "p75_r": 0.0759,
+    "drift": 0.226,
+    "mono": false,
+    "n_notes": 805,
+    "vel_std": 14.76,
+    "vel_iqr": 22.0
+   },
+   "readability": {
+    "n_bars": 76,
+    "n_rests": 35,
+    "n_notes": 604,
+    "rests_per_bar": 0.46,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.209,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.993,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1
+   }
+  }
+ },
+ {
+  "song": "L4-05_chopin_berceuse_op57",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.592,
+   "n_ref": 601,
+   "n_est": 601
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 7.9
+  },
+  "audio": {
+   "bpm": 35.7,
+   "meter": "6/8",
+   "key": "D- major",
+   "key_sharps": -5,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.9,
+   "meter_scores": {
+    "2/0": 0.792,
+    "2/1": -0.642,
+    "3/0": 0.053,
+    "3/1": 0.201,
+    "3/2": -0.101,
+    "4/0": 0.577,
+    "4/1": -0.349,
+    "4/2": 0.419,
+    "4/3": -0.516
+   },
+   "n_notes": 595,
+   "n_beats": 54,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.519,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0406,
+    "p75_r": 0.0728,
+    "drift": 0.1799,
+    "mono": false,
+    "n_notes": 601,
+    "vel_std": 13.79,
+    "vel_iqr": 22.0
+   },
+   "readability": {
+    "n_bars": 27,
+    "n_rests": 6,
+    "n_notes": 363,
+    "rests_per_bar": 0.22,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.485,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "6/8",
+    "est_ts": "6/8",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.991,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -5,
+    "est_key_sharps": -5
+   }
+  },
+  "oracle": {
+   "bpm": 35.7,
+   "meter": "6/8",
+   "key": "D- major",
+   "key_sharps": -5,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.7,
+   "meter_scores": {
+    "2/0": 0.795,
+    "2/1": -0.645,
+    "3/0": 0.05,
+    "3/1": 0.19,
+    "3/2": -0.087,
+    "4/0": 0.587,
+    "4/1": -0.335,
+    "4/2": 0.414,
+    "4/3": -0.535
+   },
+   "n_notes": 596,
+   "n_beats": 54,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.521,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0438,
+    "p75_r": 0.0717,
+    "drift": 0.2608,
+    "mono": true,
+    "n_notes": 601,
+    "vel_std": 14.0,
+    "vel_iqr": 21.0
+   },
+   "readability": {
+    "n_bars": 27,
+    "n_rests": 5,
+    "n_notes": 356,
+    "rests_per_bar": 0.19,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.472,
+    "has_pickup": false
+   },
+   "beat_level": {
+    "ref_ts": "6/8",
+    "est_ts": "6/8",
+    "meter_ok": true,
+    "meter_exact": true,
+    "beat_F": 0.991,
+    "bar_F": 1.0,
+    "meter_source": "audio_downbeats",
+    "key_ok": true,
+    "ref_key_sharps": -5,
+    "est_key_sharps": -5
+   }
+  }
+ },
+ {
+  "song": "L5-A01_brahms_ballade_op10_1",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.986,
+   "F1": 0.993,
+   "F1_with_offset": 0.578,
+   "n_ref": 291,
+   "n_est": 287
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.1
+  },
+  "audio": {
+   "bpm": 61.2,
+   "meter": "4/4",
+   "key": "D minor",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.1,
+   "meter_scores": {
+    "2/0": 1.171,
+    "2/1": -1.021,
+    "3/0": 0.126,
+    "3/1": -0.266,
+    "3/2": 0.29,
+    "4/0": 0.7,
+    "4/1": -0.643,
+    "4/2": 0.799,
+    "4/3": -0.731
+   },
+   "n_notes": 287,
+   "n_beats": 73,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.629,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0394,
+    "p75_r": 0.0728,
+    "drift": 0.3025,
+    "mono": false,
+    "n_notes": 287,
+    "vel_std": 15.75,
+    "vel_iqr": 23.0
+   },
+   "readability": {
+    "n_bars": 18,
+    "n_rests": 2,
+    "n_notes": 121,
+    "rests_per_bar": 0.11,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.083,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 61.2,
+   "meter": "4/4",
+   "key": "D minor",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 1.7,
+   "meter_scores": {
+    "2/0": 1.204,
+    "2/1": -1.054,
+    "3/0": 0.175,
+    "3/1": -0.325,
+    "3/2": 0.3,
+    "4/0": 0.752,
+    "4/1": -0.723,
+    "4/2": 0.792,
+    "4/3": -0.694
+   },
+   "n_notes": 291,
+   "n_beats": 73,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.645,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0406,
+    "p75_r": 0.0741,
+    "drift": 0.2928,
+    "mono": false,
+    "n_notes": 291,
+    "vel_std": 14.76,
+    "vel_iqr": 21.0
+   },
+   "readability": {
+    "n_bars": 19,
+    "n_rests": 4,
+    "n_notes": 121,
+    "rests_per_bar": 0.21,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.091,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-A02_mozart_var_K265",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 0.998,
+   "R": 1.0,
+   "F1": 0.999,
+   "F1_with_offset": 0.91,
+   "n_ref": 584,
+   "n_est": 585
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.2
+  },
+  "audio": {
+   "bpm": 130.4,
+   "meter": "2/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.0,
+   "meter_scores": {
+    "2/0": 0.744,
+    "2/1": -0.594,
+    "3/0": 0.003,
+    "3/1": -0.056,
+    "3/2": 0.204,
+    "4/0": 0.661,
+    "4/1": -0.341,
+    "4/2": 0.278,
+    "4/3": -0.455
+   },
+   "n_notes": 585,
+   "n_beats": 160,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.999,
+   "downbeat_purity": 0.987,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0406,
+    "p75_r": 0.0742,
+    "drift": 0.0416,
+    "mono": true,
+    "n_notes": 585,
+    "vel_std": 13.69,
+    "vel_iqr": 19.0
+   },
+   "readability": {
+    "n_bars": 80,
+    "n_rests": 11,
+    "n_notes": 544,
+    "rests_per_bar": 0.14,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.564,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 130.4,
+   "meter": "2/4",
+   "key": "C major",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.8,
+   "meter_scores": {
+    "2/0": 0.746,
+    "2/1": -0.596,
+    "3/0": 0.008,
+    "3/1": -0.038,
+    "3/2": 0.181,
+    "4/0": 0.688,
+    "4/1": -0.336,
+    "4/2": 0.254,
+    "4/3": -0.463
+   },
+   "n_notes": 584,
+   "n_beats": 160,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.867,
+   "downbeat_purity": 0.987,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0421,
+    "p75_r": 0.0751,
+    "drift": 0.0192,
+    "mono": true,
+    "n_notes": 584,
+    "vel_std": 11.5,
+    "vel_iqr": 14.25
+   },
+   "readability": {
+    "n_bars": 80,
+    "n_rests": 11,
+    "n_notes": 541,
+    "rests_per_bar": 0.14,
+    "tuplet_ratio": 0.006,
+    "short16_ratio": 0.562,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "2/4",
+    "est_ts": "2/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-A03_haydn_fantasia_Hob17_4",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 1.0,
+   "F1": 1.0,
+   "F1_with_offset": 0.969,
+   "n_ref": 819,
+   "n_est": 819
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.1
+  },
+  "audio": {
+   "bpm": 253.5,
+   "meter": "3/8",
+   "key": "G minor",
+   "key_sharps": -2,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.1,
+   "meter_scores": {
+    "2/0": 0.163,
+    "2/1": -0.013,
+    "3/0": 1.085,
+    "3/1": -0.62,
+    "3/2": -0.321,
+    "4/0": 0.114,
+    "4/1": 0.063,
+    "4/2": 0.055,
+    "4/3": -0.081
+   },
+   "n_notes": 819,
+   "n_beats": 258,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.575,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0384,
+    "p75_r": 0.0718,
+    "drift": 0.3382,
+    "mono": false,
+    "n_notes": 819,
+    "vel_std": 13.55,
+    "vel_iqr": 20.0
+   },
+   "readability": {
+    "n_bars": 86,
+    "n_rests": 31,
+    "n_notes": 583,
+    "rests_per_bar": 0.36,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.667,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": false,
+    "ref_key_sharps": 0,
+    "est_key_sharps": -2,
+    "ref_ts": "3/8",
+    "est_ts": "3/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 253.5,
+   "meter": "3/8",
+   "key": "G minor",
+   "key_sharps": -2,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.8,
+   "meter_scores": {
+    "2/0": 0.165,
+    "2/1": -0.015,
+    "3/0": 1.079,
+    "3/1": -0.627,
+    "3/2": -0.307,
+    "4/0": 0.116,
+    "4/1": 0.072,
+    "4/2": 0.054,
+    "4/3": -0.092
+   },
+   "n_notes": 819,
+   "n_beats": 258,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.579,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0391,
+    "p75_r": 0.0716,
+    "drift": 0.3688,
+    "mono": false,
+    "n_notes": 819,
+    "vel_std": 12.23,
+    "vel_iqr": 19.0
+   },
+   "readability": {
+    "n_bars": 86,
+    "n_rests": 31,
+    "n_notes": 584,
+    "rests_per_bar": 0.36,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.664,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": false,
+    "ref_key_sharps": 0,
+    "est_key_sharps": -2,
+    "ref_ts": "3/8",
+    "est_ts": "3/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-A04_brahms_ballade_op10_2",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "note_level": {
+   "P": 1.0,
+   "R": 0.989,
+   "F1": 0.994,
+   "F1_with_offset": 0.488,
+   "n_ref": 272,
+   "n_est": 269
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 3.2
+  },
+  "audio": {
+   "bpm": 101.7,
+   "meter": "4/4",
+   "key": "D major",
+   "key_sharps": 2,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.0,
+   "meter_scores": {
+    "2/0": 0.523,
+    "2/1": -0.373,
+    "3/0": -0.08,
+    "3/1": 0.139,
+    "3/2": 0.093,
+    "4/0": 0.378,
+    "4/1": -0.528,
+    "4/2": 0.267,
+    "4/3": 0.035
+   },
+   "n_notes": 269,
+   "n_beats": 112,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.563,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0481,
+    "p75_r": 0.076,
+    "drift": 0.1751,
+    "mono": true,
+    "n_notes": 269,
+    "vel_std": 14.88,
+    "vel_iqr": 20.0
+   },
+   "readability": {
+    "n_bars": 28,
+    "n_rests": 4,
+    "n_notes": 184,
+    "rests_per_bar": 0.14,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.136,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 2,
+    "est_key_sharps": 2,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  },
+  "oracle": {
+   "bpm": 101.7,
+   "meter": "4/4",
+   "key": "D major",
+   "key_sharps": 2,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 1.5,
+   "meter_scores": {
+    "2/0": 0.504,
+    "2/1": -0.354,
+    "3/0": -0.055,
+    "3/1": 0.12,
+    "3/2": 0.087,
+    "4/0": 0.368,
+    "4/1": -0.496,
+    "4/2": 0.252,
+    "4/3": 0.027
+   },
+   "n_notes": 272,
+   "n_beats": 112,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.564,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.047,
+    "p75_r": 0.0749,
+    "drift": 0.1536,
+    "mono": true,
+    "n_notes": 272,
+    "vel_std": 14.2,
+    "vel_iqr": 20.0
+   },
+   "readability": {
+    "n_bars": 28,
+    "n_rests": 2,
+    "n_notes": 184,
+    "rests_per_bar": 0.07,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.13,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 2,
+    "est_key_sharps": 2,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-B01_satie_gymnopedie_1",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.2
+  },
+  "audio": {
+   "bpm": 88.2,
+   "meter": "3/4",
+   "key": "D major",
+   "key_sharps": 2,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 1.2,
+   "meter_scores": {
+    "2/0": 0.218,
+    "2/1": -0.068,
+    "3/0": 0.987,
+    "3/1": 0.929,
+    "3/2": -1.789,
+    "4/0": 0.236,
+    "4/1": -0.078,
+    "4/2": 0.004,
+    "4/3": -0.012
+   },
+   "n_notes": 169,
+   "n_beats": 110,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.0,
+   "downbeat_purity": 0.972,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0149,
+    "p75_r": 0.025,
+    "drift": 0.0236,
+    "mono": false,
+    "n_notes": 169,
+    "vel_std": 6.11,
+    "vel_iqr": 8.0
+   },
+   "readability": {
+    "n_bars": 36,
+    "n_rests": 52,
+    "n_notes": 96,
+    "rests_per_bar": 1.44,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.0,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 2,
+    "est_key_sharps": 2,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-B02_beethoven_fur_elise",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 4.2
+  },
+  "audio": {
+   "bpm": 130.4,
+   "meter": "3/4",
+   "key": "A minor",
+   "key_sharps": 0,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.2,
+   "meter_scores": {
+    "2/0": 0.152,
+    "2/1": -0.002,
+    "3/0": 0.027,
+    "3/1": -0.276,
+    "3/2": 0.4,
+    "4/0": 0.002,
+    "4/1": 0.05,
+    "4/2": 0.151,
+    "4/3": -0.052
+   },
+   "n_notes": 443,
+   "n_beats": 128,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.586,
+   "downbeat_purity": 0.522,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0393,
+    "p75_r": 0.0705,
+    "drift": 0.0576,
+    "mono": true,
+    "n_notes": 443,
+    "vel_std": 15.92,
+    "vel_iqr": 20.0
+   },
+   "readability": {
+    "n_bars": 44,
+    "n_rests": 24,
+    "n_notes": 383,
+    "rests_per_bar": 0.55,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.316,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 0,
+    "est_key_sharps": 0,
+    "ref_ts": "3/8",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": false
+   }
+  }
+ },
+ {
+  "song": "L5-B03_schumann_traumerei",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.7
+  },
+  "audio": {
+   "bpm": 103.4,
+   "meter": "4/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 1.2,
+   "meter_scores": {
+    "2/0": -0.566,
+    "2/1": 0.716,
+    "3/0": -0.085,
+    "3/1": 0.081,
+    "3/2": 0.156,
+    "4/0": -0.505,
+    "4/1": 0.649,
+    "4/2": -0.246,
+    "4/3": 0.253
+   },
+   "n_notes": 223,
+   "n_beats": 115,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.551,
+   "downbeat_purity": 1.0,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0536,
+    "p75_r": 0.0764,
+    "drift": 0.2991,
+    "mono": false,
+    "n_notes": 223,
+    "vel_std": 13.68,
+    "vel_iqr": 20.0
+   },
+   "readability": {
+    "n_bars": 29,
+    "n_rests": 6,
+    "n_notes": 162,
+    "rests_per_bar": 0.21,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.105,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-B04_chopin_waltz_op64_2",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 3.7
+  },
+  "audio": {
+   "bpm": 230.8,
+   "meter": "3/4",
+   "key": "C# minor",
+   "key_sharps": 4,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.9,
+   "meter_scores": {
+    "2/0": 0.183,
+    "2/1": -0.033,
+    "3/0": 0.273,
+    "3/1": -0.143,
+    "3/2": 0.019,
+    "4/0": 0.271,
+    "4/1": 0.023,
+    "4/2": -0.027,
+    "4/3": -0.119
+   },
+   "n_notes": 677,
+   "n_beats": 242,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 0.555,
+   "downbeat_purity": 0.225,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0397,
+    "p75_r": 0.0718,
+    "drift": 0.2132,
+    "mono": false,
+    "n_notes": 682,
+    "vel_std": 15.95,
+    "vel_iqr": 22.0
+   },
+   "readability": {
+    "n_bars": 80,
+    "n_rests": 11,
+    "n_notes": 518,
+    "rests_per_bar": 0.14,
+    "tuplet_ratio": 0.006,
+    "short16_ratio": 0.087,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 4,
+    "est_key_sharps": 4,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C01_always_with_me",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.3
+  },
+  "audio": {
+   "bpm": 120.0,
+   "meter": "3/4",
+   "key": "F major",
+   "key_sharps": -1,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.5,
+   "meter_scores": {
+    "2/0": 0.201,
+    "2/1": -0.051,
+    "3/0": 1.094,
+    "3/1": -0.401,
+    "3/2": -0.549,
+    "4/0": 0.16,
+    "4/1": 0.038,
+    "4/2": 0.058,
+    "4/3": -0.106
+   },
+   "n_notes": 328,
+   "n_beats": 139,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.818,
+   "downbeat_purity": 0.911,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0461,
+    "p75_r": 0.0841,
+    "drift": 0.2665,
+    "mono": false,
+    "n_notes": 328,
+    "vel_std": 16.1,
+    "vel_iqr": 29.0
+   },
+   "readability": {
+    "n_bars": 46,
+    "n_rests": 3,
+    "n_notes": 282,
+    "rests_per_bar": 0.07,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.021,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -1,
+    "est_key_sharps": -1,
+    "ref_ts": "3/4",
+    "est_ts": "3/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C02_sparkle",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.6
+  },
+  "audio": {
+   "bpm": 125.0,
+   "meter": "12/8",
+   "key": "B major",
+   "key_sharps": 5,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 2.6,
+   "meter_scores": {
+    "2/0": -0.446,
+    "2/1": 0.596,
+    "3/0": -0.22,
+    "3/1": 0.16,
+    "3/2": 0.212,
+    "4/0": -0.435,
+    "4/1": 1.188,
+    "4/2": -0.157,
+    "4/3": -0.453
+   },
+   "n_notes": 632,
+   "n_beats": 161,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": true,
+   "comp_ratio": 0.322,
+   "downbeat_purity": 0.902,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0386,
+    "p75_r": 0.0654,
+    "drift": 0.108,
+    "mono": true,
+    "n_notes": 632,
+    "vel_std": 12.49,
+    "vel_iqr": 19.0
+   },
+   "readability": {
+    "n_bars": 40,
+    "n_rests": 8,
+    "n_notes": 592,
+    "rests_per_bar": 0.2,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.014,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 5,
+    "est_key_sharps": 5,
+    "ref_ts": "12/8",
+    "est_ts": "12/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C03_night_piano_5",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.2
+  },
+  "audio": {
+   "bpm": 109.1,
+   "meter": "4/4",
+   "key": "C minor",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": true,
+   "seconds": 1.5,
+   "meter_scores": {
+    "2/0": 0.758,
+    "2/1": -0.608,
+    "3/0": -0.179,
+    "3/1": 0.303,
+    "3/2": 0.028,
+    "4/0": 0.448,
+    "4/1": -0.278,
+    "4/2": 0.511,
+    "4/3": -0.535
+   },
+   "n_notes": 233,
+   "n_beats": 135,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 1.532,
+   "downbeat_purity": 0.613,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0429,
+    "p75_r": 0.0728,
+    "drift": 0.157,
+    "mono": true,
+    "n_notes": 233,
+    "vel_std": 15.17,
+    "vel_iqr": 26.0
+   },
+   "readability": {
+    "n_bars": 34,
+    "n_rests": 4,
+    "n_notes": 230,
+    "rests_per_bar": 0.12,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.022,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C04_river_flows_in_you",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.2
+  },
+  "audio": {
+   "bpm": 136.4,
+   "meter": "4/4",
+   "key": "A major",
+   "key_sharps": 3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.2,
+   "meter_scores": {
+    "2/0": 0.645,
+    "2/1": -0.495,
+    "3/0": -0.029,
+    "3/1": 0.032,
+    "3/2": 0.148,
+    "4/0": 0.695,
+    "4/1": -0.023,
+    "4/2": 0.113,
+    "4/3": -0.646
+   },
+   "n_notes": 335,
+   "n_beats": 160,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.619,
+   "downbeat_purity": 0.636,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.039,
+    "p75_r": 0.0693,
+    "drift": 0.1359,
+    "mono": false,
+    "n_notes": 337,
+    "vel_std": 13.79,
+    "vel_iqr": 23.0
+   },
+   "readability": {
+    "n_bars": 40,
+    "n_rests": 14,
+    "n_notes": 291,
+    "rests_per_bar": 0.35,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.055,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": 3,
+    "est_key_sharps": 3,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C05_croatian_rhapsody",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.1
+  },
+  "audio": {
+   "bpm": 96.8,
+   "meter": "4/4",
+   "key": "C minor",
+   "key_sharps": -3,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.6,
+   "meter_scores": {
+    "2/0": 0.732,
+    "2/1": -0.582,
+    "3/0": -0.008,
+    "3/1": 0.081,
+    "3/2": 0.077,
+    "4/0": 0.653,
+    "4/1": -0.361,
+    "4/2": 0.273,
+    "4/3": -0.415
+   },
+   "n_notes": 721,
+   "n_beats": 113,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": false,
+   "comp_ratio": 2.228,
+   "downbeat_purity": 0.731,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0457,
+    "p75_r": 0.0733,
+    "drift": 0.2908,
+    "mono": false,
+    "n_notes": 721,
+    "vel_std": 7.78,
+    "vel_iqr": 9.0
+   },
+   "readability": {
+    "n_bars": 28,
+    "n_rests": 0,
+    "n_notes": 538,
+    "rests_per_bar": 0.0,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.662,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -3,
+    "est_key_sharps": -3,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C06_mcml",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.1
+  },
+  "audio": {
+   "bpm": 63.8,
+   "meter": "12/8",
+   "key": "D- major",
+   "key_sharps": -5,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 2.0,
+   "meter_scores": {
+    "2/0": 0.628,
+    "2/1": -0.478,
+    "3/0": -0.256,
+    "3/1": 0.119,
+    "3/2": 0.293,
+    "4/0": 0.406,
+    "4/1": -0.28,
+    "4/2": 0.381,
+    "4/3": -0.358
+   },
+   "n_notes": 278,
+   "n_beats": 74,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats+notes",
+   "compound": true,
+   "comp_ratio": 0.413,
+   "downbeat_purity": 0.909,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": false,
+    "med_r": 0.0475,
+    "p75_r": 0.0742,
+    "drift": 0.1195,
+    "mono": false,
+    "n_notes": 278,
+    "vel_std": 11.01,
+    "vel_iqr": 18.0
+   },
+   "readability": {
+    "n_bars": 18,
+    "n_rests": 3,
+    "n_notes": 225,
+    "rests_per_bar": 0.17,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.107,
+    "has_pickup": false
+   },
+   "meta_level": {
+    "key_ok": true,
+    "ref_key_sharps": -5,
+    "est_key_sharps": -5,
+    "ref_ts": "12/8",
+    "est_ts": "12/8",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ },
+ {
+  "song": "L5-C07_flower_dance",
+  "transcribe": {
+   "cached_from": "v4-test-20261123"
+  },
+  "beat_model": {
+   "model": "beat_this-final0",
+   "seconds": 2.1
+  },
+  "audio": {
+   "bpm": 100.0,
+   "meter": "4/4",
+   "key": "G# minor",
+   "key_sharps": 5,
+   "single_staff": false,
+   "beat_regular": false,
+   "seconds": 3.3,
+   "meter_scores": {
+    "2/0": 0.959,
+    "2/1": -0.809,
+    "3/0": 0.244,
+    "3/1": -0.064,
+    "3/2": -0.031,
+    "4/0": 0.33,
+    "4/1": -0.61,
+    "4/2": 0.906,
+    "4/3": -0.467
+   },
+   "n_notes": 623,
+   "n_beats": 123,
+   "beat_source": "beat_this",
+   "meter_source": "audio_downbeats",
+   "compound": false,
+   "comp_ratio": 0.866,
+   "downbeat_purity": 0.862,
+   "beat_auto_info": {
+    "mechanical": false,
+    "beat_regular": true,
+    "med_r": 0.0394,
+    "p75_r": 0.0615,
+    "drift": 0.0461,
+    "mono": false,
+    "n_notes": 623,
+    "vel_std": 13.43,
+    "vel_iqr": 19.5
+   },
+   "readability": {
+    "n_bars": 31,
+    "n_rests": 1,
+    "n_notes": 505,
+    "rests_per_bar": 0.03,
+    "tuplet_ratio": 0.0,
+    "short16_ratio": 0.495,
+    "has_pickup": true
+   },
+   "meta_level": {
+    "key_ok": false,
+    "ref_key_sharps": 4,
+    "est_key_sharps": 5,
+    "ref_ts": "4/4",
+    "est_ts": "4/4",
+    "meter_ok": true,
+    "meter_exact": true
+   }
+  }
+ }
+]
