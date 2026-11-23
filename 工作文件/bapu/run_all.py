@@ -177,7 +177,9 @@ def main():
     out = Path(a.out) if a.out else ROOT / "runs" / dt.datetime.now().strftime("%Y%m%d-%H%M%S")
     out.mkdir(parents=True, exist_ok=True)
     cache = Path(a.midi_cache) if a.midi_cache else None
-    songs = sorted(p for p in Path(a.songs_dir).iterdir() if p.is_dir())
+    audio_names = ("audio.mp3", "audio.flac", "audio.wav", "audio.ogg", "audio.oga", "audio.m4a")
+    songs = sorted(p for p in Path(a.songs_dir).iterdir()
+                   if p.is_dir() and any((p / f).exists() for f in audio_names))
     if a.songs:
         songs = [s for s in songs if any(s.name.startswith(x) for x in a.songs)]
     results = []
