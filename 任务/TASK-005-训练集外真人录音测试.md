@@ -79,4 +79,4 @@ Antigravity / 2026-11-23
 
 ## 完成记录
 
-（分支 / commit / 报告路径）
+antigravity/heldout-test / 2d71483 / 最终成品\v4-test-20261123\诊断报告.md、工作文件\runs\v4-test-20261123\report.md
