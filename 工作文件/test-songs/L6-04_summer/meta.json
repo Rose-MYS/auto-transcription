@@ -1,0 +1,19 @@
+{
+  "id": "L6-04",
+  "category": "L6_Rose_Validation",
+  "title": "Summer (菊次郎的夏天)",
+  "composer": "久石让",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV1Jt411u74J",
+  "license": "个人学习测试（Rose 2026-11-23 规则：随仓库提交）",
+  "ref_key_sharps": 2,
+  "ref_key_name": "D major",
+  "ref_ts": "4/4",
+  "ref_basis": "乐谱PDF第1页为D大调(2#) 4/4，审核记录确认录音为D大调",
+  "pickup": false,
+  "rubato": false,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 15.0,
+  "clip_end": 90.0,
+  "maestro_overlap": false
+}

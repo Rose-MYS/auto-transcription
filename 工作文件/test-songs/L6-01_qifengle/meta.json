@@ -1,0 +1,19 @@
+{
+  "id": "L6-01",
+  "category": "L6_Rose_Validation",
+  "title": "起风了",
+  "composer": "高桥优 / 买辣椒也用券",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV17y4y167xu",
+  "license": "个人学习测试（Rose 2026-11-23 规则：随仓库提交）",
+  "ref_key_sharps": -3,
+  "ref_key_name": "Eb major",
+  "ref_ts": "4/4",
+  "ref_basis": "乐谱PDF第1页为Eb大调(3b) 4/4；Transkun MIDI 音级分布(Bb/F/G/C/Eb/Ab/D)及KS/TKP均确认为降E大调(-3)",
+  "pickup": false,
+  "rubato": false,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 15.0,
+  "clip_end": 90.0,
+  "maestro_overlap": false
+}

@@ -1,0 +1,19 @@
+{
+  "id": "L6-03",
+  "category": "L6_Rose_Validation",
+  "title": "大鱼",
+  "composer": "钱雷 / 周深",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV1Mf4y157NJ",
+  "license": "个人学习测试（Rose 2026-11-23 规则：随仓库提交）",
+  "ref_key_sharps": -5,
+  "ref_key_name": "Bb minor",
+  "ref_ts": "4/4",
+  "ref_basis": "乐谱PDF第1页为4/4（5#，与录音不同调）；审核记录提示f小调/bb小调；Transkun MIDI 音级分布(Bb/F/Eb/Db/Ab/C/Gb)与低音进行(Bb-Gb-F-Ab)及KS/TKP均确认为降b小调(-5)",
+  "pickup": false,
+  "rubato": false,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 20.0,
+  "clip_end": 95.0,
+  "maestro_overlap": false
+}

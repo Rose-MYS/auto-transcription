@@ -1,0 +1,11 @@
+title=L6-08_truth_that_you_leave
+1=Bb
+4/4
+
+q0. q1. 1 ~ q1 ~ s1 s2 q3. | s5 s5 s5 s5 s2 s2 q2 s5 s5 s5 q5 q2 | q3 4 q3 q6, 1 3 | 7,. q6, q7, q1 3 |
+6, q5 q5 q5 q5 q2 | q2 2 q5 q5 q5 s5 s2 s3 q4. | q5 q6, q7, s1 s2 s3 q4. s6, s7, | s6, s7, s1 s5 1 s4, s4 s3 2 s6, |
+7, q3 s4 q3 q2. 1 - - | q6, q7,. 1 ~ s1 | q5 q5 q5 q5 q2 q2 2 | q5 q5 q5 q5 q2 q3 4 |
+q3 q6, q7, q1 q3 q6 q7 | 1'. q5' q5' q5' q5' q2' | q2' 2' q5' q5' q5' q5' q2' | q3' 4' 3' - 3 |
+q6 q7 q1' q7 q6 q3 1 - | q5' q5' q5' q5' q2' | q2' 2' q5' q5' q5' q5' q2' | q3' 4' 5' - - |
+q3'. q4' s3' s6 s7 s1' s5' 1' | s1' s4' s3' s2' 5 - 7 - | q7' s3' q2'. 3' 2' - | q1' q1 3 - |
+q5' q5' q5' s5' s2' s2' q2'. q5' | q5' q5' q5' q2' q3' q5'. 6' | q6. 0 - - |

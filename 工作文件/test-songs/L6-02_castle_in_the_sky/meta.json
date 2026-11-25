@@ -1,0 +1,19 @@
+{
+  "id": "L6-02",
+  "category": "L6_Rose_Validation",
+  "title": "天空之城·伴随着你",
+  "composer": "久石让",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV1DG4y167TZ",
+  "license": "个人学习测试（Rose 2026-11-23 规则：随仓库提交）",
+  "ref_key_sharps": -3,
+  "ref_key_name": "C minor",
+  "ref_ts": "4/4",
+  "ref_basis": "乐谱PDF第1页为4/4（E大调，与录音不同调）；Transkun MIDI 音级分布(G/C/Eb/D/Bb/F/Ab)与低音(G/C/Bb/F)及KS/TKP均确认为c小调(-3)",
+  "pickup": false,
+  "rubato": false,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 15.0,
+  "clip_end": 90.0,
+  "maestro_overlap": false
+}

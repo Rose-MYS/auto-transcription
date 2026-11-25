@@ -1,0 +1,19 @@
+{
+  "id": "L6-07",
+  "category": "L6_Rose_Validation",
+  "title": "孤勇者",
+  "composer": "钱雷 / 陈奕迅",
+  "performer": "B站翻弹 UP 主（Rose 合集）",
+  "source_url": "https://www.bilibili.com/video/BV1ya411h7Mb",
+  "license": "个人学习测试（Rose 2026-11-23 规则：随仓库提交）",
+  "ref_key_sharps": 5,
+  "ref_key_name": "B major",
+  "ref_ts": "4/4",
+  "ref_basis": "乐谱PDF第1页为B大调(5#) 4/4，审核记录确认录音为B大调",
+  "pickup": false,
+  "rubato": false,
+  "audio_quality": "bilibili_aac",
+  "clip_start": 15.0,
+  "clip_end": 90.0,
+  "maestro_overlap": false
+}
